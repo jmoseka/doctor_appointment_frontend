@@ -2,8 +2,9 @@ import './signup.css';
 
 function Signup() {
     return (
-        <div className="container">
+        <div className="container-signup">
             <section className='section-logo'>
+                <div className='logo-content'>
                 <div className='logo-title'>
                     <h1>DOCTORS APPOINTMENT</h1>
                     <span className='line' />
@@ -12,9 +13,11 @@ function Signup() {
                     <p>The leading online booking website 
                         for doctors all around the world</p>
                 </div>
-
+                </div>
             </section>
+
             <section className='section-form'>
+                <div className='form-content'>
                 <div className='form-title'>
                     <h2>Create an account</h2>
                 </div>
@@ -40,9 +43,11 @@ function Signup() {
                 </form>
 
                 <div className='signup-buttons'>
-                    <button id='signup-btn'>SIGN UP</button>
-                    <button id='signup-login-btn'>LOGIN</button>
+                    <button id='signup-login-btn' className='style-btn'>LOGIN</button>
+                    <button id='signup-btn' className='style-btn'>SIGN UP</button>
                 </div>
+                </div>
+
                 </div>
             </section>
         </div>
