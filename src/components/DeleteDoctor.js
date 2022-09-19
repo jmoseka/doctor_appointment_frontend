@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const DeleteDoctor = () => {
-  return (
-    <div>DeleteDoctor</div>
-  )
-}
+const DeleteDoctor = () => (
+  <div>DeleteDoctor</div>
+);
 
-export default DeleteDoctor
+export default DeleteDoctor;
