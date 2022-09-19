@@ -5,7 +5,7 @@
 }
 .section-logo {
     background-color: #97bf0e;
-    width: 40vw;
+    width: 35vw;
     color: white;
 }
 
@@ -74,10 +74,21 @@
     }
 
     .section-logo {
-        height: 10vh;
+        background-color: pink;
+        width: 100%;
+        color: black;
+        padding: 10px;
+    }
+
+    .logo-content {
+        margin: 0;
     }
 
     .hidden {
       display: none;
+    }
+
+    .form-content {
+        margin: 0;
     }
   }
