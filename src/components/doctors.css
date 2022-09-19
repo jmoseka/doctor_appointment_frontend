@@ -1,0 +1,27 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.doctors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctors-images {
+  width: 70%;
+  cursor: pointer;
+}
+
+.doctors-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6em;
+  margin-top: 3rem;
+}
