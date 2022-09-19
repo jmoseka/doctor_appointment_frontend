@@ -1,29 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import AddDoctor from "./components/AddDoctor"
+import Appointments from "./components/Appointments"
+import DeleteDoctor from "./components/DeleteDoctor"
+import Doctors from "./components/Doctors"
+import Navbar from "./components/Navbar"
+import NewAppointment from "./components/NewAppointment"
+import NotFound from './components/NotFound';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <section id="main-sec">
+      <Routes>
+        <Route path="/" element={<Doctors/>}/>
+        <Route path="/add_doctor" element={<AddDoctor/>}/> 
+        <Route path="/appointments" element={<Appointments/>}/> 
+        <Route path="/new_appointment" element={<NewAppointment/>}/>
+        <Route path="/delete_doctor" element={<DeleteDoctor/>}/>
+        <Route path="/*" element={<NotFound/>} />
+      </Routes>
+      </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
