@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 85px;
+    margin-top: 90px;
 }
 
 .form-container {
@@ -54,16 +54,30 @@
     padding: 14px 40px;
     border-radius: 25px;
     background-color: white;
+    border-style: solid;
     
 }
 
 #signup-login-btn {
-    outline: none;
     border-color: #97bf0e;
 }
 
 #signup-btn {
+    border: none;
     background: #97bf0e;
     color: white;
-    border: none;
 }
+
+@media (max-width: 750px) {
+    .container-signup {
+        display: block;
+    }
+
+    .section-logo {
+        height: 10vh;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }

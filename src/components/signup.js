@@ -9,7 +9,7 @@ function Signup() {
                     <h1>DOCTORS APPOINTMENT</h1>
                     <span className='line' />
                 </div>
-                <div className='logo-text'>
+                <div className='logo-text hidden'>
                     <p>The leading online booking website 
                         for doctors all around the world</p>
                 </div>
