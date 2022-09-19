@@ -2,7 +2,7 @@ import './signup.css';
 
 function Signup() {
     return (
-        <div className="container">
+        <div className="container-signup col-12-flex bg-primary">
             <section className='section-logo'>
                 <div className='logo-title'>
                     <h1>DOCTORS APPOINTMENT</h1>

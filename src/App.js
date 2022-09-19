@@ -6,11 +6,13 @@ import Doctors from "./components/Doctors"
 import Navbar from "./components/Navbar"
 import NewAppointment from "./components/NewAppointment"
 import NotFound from './components/NotFound';
+import Signup from './components/splash_screen/signup';
 
 const App = () => {
   return (
     <div>
-      <Navbar/>
+      <Signup />
+      {/* <Navbar/>
       <section id="main-sec">
       <Routes>
         <Route path="/" element={<Doctors/>}/>
@@ -20,7 +22,7 @@ const App = () => {
         <Route path="/delete_doctor" element={<DeleteDoctor/>}/>
         <Route path="/*" element={<NotFound/>} />
       </Routes>
-      </section>
+      </section> */}
     </div>
   )
 }
