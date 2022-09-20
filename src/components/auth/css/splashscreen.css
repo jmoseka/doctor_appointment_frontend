@@ -38,3 +38,14 @@ a:hover {
     background: #617c00;
     border: none;
 }
+
+.splash-btn:hover {
+    background: #97bf0e;
+}
+
+@media (min-width: 768px) {
+    .splash-btn {
+        width: 25%;
+        padding: 1rem;
+    }
+}
