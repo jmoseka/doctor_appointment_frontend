@@ -1,8 +1,7 @@
-
 import './css/sign_in_up.css';
 import { Link } from 'react-router-dom';
 
-function Signup() {
+function Signin() {
     return (
         <div className="container-signup d-md-flex">
             <section className='section-logo text-center'>
@@ -19,9 +18,9 @@ function Signup() {
                 </div>
 
             </section>
-            <section className='section-form d-flex flex-column align-items-center mt-4 mt-md-5 pt-md-3'>
+            <section className='section-form d-flex flex-column align-items-center mt-4 mt-md-5 pt-md-5'>
                 <div className='form-title'>
-                    <p className='h3'>Create an account</p>
+                    <p className='h3'>Log in to your account</p>
                 </div>
 
                 <div className='form-container'>
@@ -38,18 +37,14 @@ function Signup() {
                         <label className='ms-4 mb-1'>Password</label>
                         <input type="password" name="password" id="signup-password" className="form-control rounded-pill" placeholder='Enter your password' required />
                     </div>
-                    <div className='form-group'>
-                        <label className='ms-4 mb-1'>Confirm password</label>
-                        <input type="password" name="password" id="confirm-password" className="form-control rounded-pill" placeholder='Confirm your password' required />
-                    </div>
                 </form>
 
-                <div className='signup-buttons mt-4 text-center'>
-                <Link className='style-btn rounded-pill' to="/">SIGN UP</Link> 
+                <div className='signup-buttons mt-5 text-center'>
+               <Link className='style-btn rounded-pill' to="/">LOGIN</Link> 
                 </div>
 
-                <div className='notice-account mt-3'>
-                    <p>Already have an account? <span><Link className='login-link' id='signup-on-login' to="/">Login</Link></span></p>
+                <div className='notice-account mt-4'>
+                    <p>Dont have an account? <span className='login-link'><Link to="/signin" id='login-on-signup'>Sign up</Link></span></p>
                 </div>
                 </div>
             </section>
@@ -57,4 +52,4 @@ function Signup() {
     )
 }
 
-export default Signup;
+export default Signin;
