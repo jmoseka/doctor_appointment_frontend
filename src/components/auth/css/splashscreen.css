@@ -16,3 +16,25 @@ a {
 a:hover {
     color: white;
 }
+
+.logo-text-style {
+    color: rgb(245,199,2);
+    font-weight: bold;
+}
+
+.btn-container
+{
+    width: 90%;
+}
+
+.splash-title {
+    margin-top: 5rem;
+}
+
+.splash-btn {
+    color: white;
+    width: 50%;
+    padding: 0.7rem;
+    background: #617c00;
+    border: none;
+}
