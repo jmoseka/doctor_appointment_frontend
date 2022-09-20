@@ -1,0 +1,9 @@
+.container-splash {
+    min-width: 300px;
+    width: 100%;
+    height: 100vh;
+    background: rgb(245,199,2);
+    background-image: linear-gradient(0deg, #5858587e 56%, #5858587e 56%), url('./onlinedoc.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
