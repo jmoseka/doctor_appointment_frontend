@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import AddDoctor from './components/AddDoctor';
 import Appointments from './components/Appointments';
+import Splashscreen from './components/auth/splash_screen';
 import DeleteDoctor from './components/DeleteDoctor';
 import Doctors from './components/Doctors';
 import Navbar from './components/Navbar';
@@ -9,7 +10,8 @@ import NotFound from './components/NotFound';
 
 const App = () => (
   <div>
-    <Navbar />
+    <Splashscreen />
+    {/* <Navbar />
     <section id="main-sec">
       <Routes>
         <Route path="/" element={<Doctors />} />
@@ -19,7 +21,7 @@ const App = () => (
         <Route path="/delete_doctor" element={<DeleteDoctor />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
-    </section>
+    </section> */}
   </div>
 );
 
