@@ -1,7 +1,26 @@
+import React, { useState } from 'react';
 import './css/sign_in_up.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { SignUpAction } from '../../redux/auth/register';
 
 function Signup() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      name,
+      email,
+      password,
+    };
+    dispatch(SignUpAction(user));
+  };
+
   return (
     <div className="container-signup d-md-flex">
       <section className="section-logo text-center">
@@ -27,26 +46,22 @@ function Signup() {
         </div>
 
         <div className="form-container">
-          <form className="signup-form">
+          <form className="signup-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <p className="ms-4 mb-1">Full Name</p>
-              <input type="text" name="name" id="signup-name" className="form-control rounded-pill" placeholder="Enter your name" required />
+              <p className="ms-4 mb-1">Name</p>
+              <input type="text" name="name" id="signup-name" className="form-control rounded-pill" placeholder="Enter your name" required onChange={(e) => setName(e.target.value)} />
             </div>
             <div className="form-group">
               <p className="ms-4 mb-1">Email</p>
-              <input type="text" name="email" id="signup-email" className="form-control rounded-pill" placeholder="Enter your email" required />
+              <input type="text" name="email" id="signup-email" className="form-control rounded-pill" placeholder="Enter your email" required onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="form-group">
               <p className="ms-4 mb-1">Password</p>
-              <input type="password" name="password" id="signup-password" className="form-control rounded-pill" placeholder="Enter your password" required />
-            </div>
-            <div className="form-group">
-              <p className="ms-4 mb-1">Confirm password</p>
-              <input type="password" name="password" id="confirm-password" className="form-control rounded-pill" placeholder="Confirm your password" required />
+              <input type="password" name="password" id="signup-password" className="form-control rounded-pill" placeholder="Enter your password" required onChange={(e) => setPassword(e.target.value)} />
             </div>
 
             <div className="signup-buttons mt-4 text-center">
-              <button type="submit" className="style-btn rounded-pill" to="/splashscreen">SIGN UP</button>
+              <button type="submit" className="style-btn rounded-pill" to="/signin">SIGN UP</button>
             </div>
           </form>
 
