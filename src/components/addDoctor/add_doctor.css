@@ -10,11 +10,26 @@
 }
 
 #doctor-submit {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
   padding: 13px;
+  width: 40%;
+  background: #617c00;
+  color: white;
+  border: none;
+}
+
+#doctor-submit:hover {
+  background: #97bf0e;
+}
+
+
+form {
+  background-color: rgba(162, 204, 23, 0.486);
 }
 
 .doc-form {
-  background-color: rgba(162, 204, 23, 0.29);
   width: 100%;
   height: auto;
   display: flex;
@@ -50,5 +65,13 @@
 
   .doc-container-form {
     justify-content: space-between;
+    margin-left: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  .doc-container-form {
+    justify-content: space-between;
+    margin-left: 150px;
   }
 }

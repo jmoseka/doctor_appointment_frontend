@@ -9,7 +9,7 @@ const AddDoctor = () => (
       </div>
 
       <div className="form-container d-flex justify-content-center">
-        <form>
+        <form className="pb-5">
           <div className="doc-form py-5">
             <div className="form-group">
               <p className="ms-4 mb-1"> Full Name </p>
@@ -66,8 +66,8 @@ const AddDoctor = () => (
             </div>
           </div>
 
-          <div>
-            <input type="submit" name="submit-item" id="doctor-submit" className="rounded-pill" value="SUBMIT" />
+          <div className="text-center mt-4">
+            <input type="submit" name="submit-item" id="doctor-submit" className="text-center rounded-pill" value="SUBMIT" />
 
           </div>
 
