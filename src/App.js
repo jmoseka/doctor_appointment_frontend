@@ -9,11 +9,12 @@ import Doctors from './components/Doctors';
 import Navbar from './components/Navbar';
 import NewAppointment from './components/NewAppointment';
 import NotFound from './components/NotFound';
+import localStorages from './helpers/localStorage';
 
 const App = () => {
-  const hasAccount = () => 'yes';
+  const hasAccount = localStorages.getUser();
 
-  if (hasAccount === 'yes') {
+  if (hasAccount.user) {
     return (
       <div>
         <Navbar />
