@@ -10,19 +10,23 @@ const AddDoctor = () => (
 
       <div className="form-container d-flex justify-content-center">
         <form className="doc-form p-3">
-          <div className="form-group">
-            <label htmlFor="name" className="ms-4 mb-1">
-              Full Name
-              <input type="text" name="name" id="doctor-name" className="form-control rounded-pill" placeholder="Enter your name" required />
-            </label>
+          <div className="d-flex">
+            <div className="form-group">
+              <label htmlFor="name" className="ms-4 mb-1">
+                Full Name
+                <input type="text" name="name" id="doctor-name" className="form-control rounded-pill" placeholder="Enter your name" required />
+              </label>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email" className="ms-4 mb-1">
+                Email
+                <input type="text" name="email" id="doctor-email" className="form-control rounded-pill" placeholder="Enter your email" required />
+              </label>
+            </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="email" className="ms-4 mb-1">
-              Email
-              <input type="text" name="email" id="doctor-email" className="form-control rounded-pill" placeholder="Enter your email" required />
-            </label>
-          </div>
+          {/* End of row 1 */}
 
           <div className="form-group">
             <label htmlFor="speciality" className="ms-4 mb-1">

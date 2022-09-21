@@ -79,6 +79,7 @@ body {
 
 /* main section */
 #main-sec {
+  width: 100%;
   position: absolute;
   margin-left: 15vw;
   padding: 20px;
