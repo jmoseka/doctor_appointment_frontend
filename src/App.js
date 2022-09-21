@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Signin from './components/auth/signin';
 // import AddDoctor from './components/addDoctor/AddDoctor';
 // import Appointments from './components/Appointments';
 import Signup from './components/auth/signup';
@@ -16,6 +17,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Splashscreen />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/signup" element={<Signin />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
 
