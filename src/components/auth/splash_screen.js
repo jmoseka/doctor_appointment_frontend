@@ -13,7 +13,7 @@ function Splashscreen() {
       </div>
       <div className="btn-container d-flex flex-column mt-5 pt-5 align-items-center text-center">
         <Link className="h6 rounded-pill splash-btn" to="/signup">GET STARTED</Link>
-        <Link className="h6 rounded-pill splash-btn" to="./signin">LOGIN</Link>
+        <Link className="h6 rounded-pill splash-btn" to="/signin">LOGIN</Link>
       </div>
     </div>
   );

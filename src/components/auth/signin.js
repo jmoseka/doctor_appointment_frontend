@@ -43,14 +43,14 @@ function Signin() {
           </form>
 
           <div className="signup-buttons mt-5 text-center">
-            <Link className="style-btn rounded-pill" to="/">LOGIN</Link>
+            <Link className="style-btn rounded-pill" to="/splashscreen">LOGIN</Link>
           </div>
 
           <div className="notice-account mt-4">
             <p>
               Dont have an account?
               {' '}
-              <span className="login-link"><Link to="/signin" id="login-on-signup">Sign up</Link></span>
+              <span className="login-link"><Link to="/signup" id="login-on-signup">Sign up</Link></span>
             </p>
           </div>
         </div>
