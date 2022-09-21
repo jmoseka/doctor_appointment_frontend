@@ -1,7 +1,23 @@
-import './css/sign_in_up.css';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { LoginUserAction } from '../../redux/auth/login';
+import './css/sign_in_up.css';
 
 function Signin() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = {
+      email,
+      password,
+    };
+    dispatch(LoginUserAction(user));
+  };
   return (
     <div className="container-signup d-md-flex">
       <section className="section-logo text-center">
@@ -27,24 +43,20 @@ function Signin() {
         </div>
 
         <div className="form-container">
-          <form className="signup-form">
-            <div className="form-group">
-              <p className="ms-4 mb-1">Full Name</p>
-              <input type="text" name="name" id="signup-name" className="form-control rounded-pill" placeholder="Enter your name" required />
-            </div>
+          <form className="signup-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <p className="ms-4 mb-1">Email</p>
-              <input type="text" name="email" id="signup-email" className="form-control rounded-pill" placeholder="Enter your email" required />
+              <input type="text" name="email" id="signup-email" className="form-control rounded-pill" placeholder="Enter your email" required onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="form-group">
               <p className="ms-4 mb-1">Password</p>
-              <input type="password" name="password" id="signup-password" className="form-control rounded-pill" placeholder="Enter your password" required />
+              <input type="password" name="password" id="signup-password" className="form-control rounded-pill" placeholder="Enter your password" required onChange={(e) => setPassword(e.target.value)} />
+            </div>
+
+            <div className="signup-buttons mt-5 text-center">
+              <button type="submit" className="style-btn rounded-pill" to="/">LOGIN</button>
             </div>
           </form>
-
-          <div className="signup-buttons mt-5 text-center">
-            <Link className="style-btn rounded-pill" to="/splashscreen">LOGIN</Link>
-          </div>
 
           <div className="notice-account mt-4">
             <p>
