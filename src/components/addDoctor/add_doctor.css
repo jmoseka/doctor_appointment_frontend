@@ -1,56 +1,54 @@
 
-.doc-container-form{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    
+.doc-container-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-container {
-    width: 100%;
+  width: 100%;
 }
 
 #doctor-submit {
-    padding: 13px;
+  padding: 13px;
 }
 
 .doc-form {
-    background-color: rgba(162, 204, 23, 0.29);
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1rem;
+  background-color: rgba(162, 204, 23, 0.29);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .form-group {
-    width: 40%;
+  width: 40%;
 }
 
 .form-control {
-    width: 100%;
-     background-color: white;
+  width: 100%;
+  background-color: white;
 }
 
 .reserve-radio {
-    justify-self: start;
-    align-self: flex-start;
+  justify-self: start;
+  align-self: flex-start;
 }
 
-
 @media (max-width: 800px) {
-    .doc-form {
-        flex-direction: column;
-        align-items: center;
-    }
-    .form-group {
-        width: 90%;
-    }
-    .doc-container-form{
-        justify-content: space-between;
-    }
+  .doc-form {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .form-group {
+    width: 90%;
+  }
 
+  .doc-container-form {
+    justify-content: space-between;
+  }
 }
