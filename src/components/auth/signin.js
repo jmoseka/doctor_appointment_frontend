@@ -13,7 +13,7 @@ function Signin() {
 
         </div>
         <div className="logo-text hidden mt-5">
-          <p className="p-2">
+          <p className="p-2 logo-content">
             The leading online booking website
             for doctors anywhere, anytime. Take care of your body it will take care of you
 

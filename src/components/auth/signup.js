@@ -44,11 +44,11 @@ function Signup() {
               <p className="ms-4 mb-1">Confirm password</p>
               <input type="password" name="password" id="confirm-password" className="form-control rounded-pill" placeholder="Confirm your password" required />
             </div>
-          </form>
 
-          <div className="signup-buttons mt-4 text-center">
-            <Link className="style-btn rounded-pill" to="/splashscreen">SIGN UP</Link>
-          </div>
+            <div className="signup-buttons mt-4 text-center">
+              <button type="submit" className="style-btn rounded-pill" to="/splashscreen">SIGN UP</button>
+            </div>
+          </form>
 
           <div className="notice-account mt-3">
             <p>
