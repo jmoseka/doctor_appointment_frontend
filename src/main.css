@@ -22,6 +22,7 @@ body {
 
 /* navbar */
 .navbar {
+  min-width: 250px;
   width: 15vw;
   height: 100vh;
   border-right: 0.4px solid rgba(142, 142, 142, 0.2);
@@ -79,7 +80,6 @@ body {
 
 /* main section */
 #main-sec {
-  width: 100%;
   position: absolute;
   margin-left: 15vw;
   padding: 20px;

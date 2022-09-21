@@ -1,38 +1,36 @@
-.add-doc-container {
-    width: 100%;
-    background: red;
-}
+
 .doc-container-form{
-    width: 100%;
-    height: 90vh;
-    background: rebeccapurple;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
 }
 
 .form-container {
-    width: 85%;
-    height: 90vh;
-    background-color: orchid
+    width: 100%;
+}
+
+#doctor-submit {
+    padding: 13px;
 }
 
 .doc-form {
     background-color: rgba(162, 204, 23, 0.29);
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 1rem;
 }
 
 .form-group {
-    text-align: center;
+    width: 40%;
 }
 
-label {
-    text-align: left;
-}
 .form-control {
+    width: 100%;
      background-color: white;
 }
 
@@ -41,13 +39,18 @@ label {
     align-self: flex-start;
 }
 
-@media (max-width: 1200px) {
+
+@media (max-width: 800px) {
+    .doc-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-group {
+        width: 90%;
+    }
     .doc-container-form{
         justify-content: space-between;
     }
 
-    .form-container {
-        width: 65%;
-    }
 
 }
