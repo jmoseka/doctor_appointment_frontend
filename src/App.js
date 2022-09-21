@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import AddDoctor from './components/addDoctor/AddDoctor';
-import Appointments from './components/Appointments';
+// import AddDoctor from './components/addDoctor/AddDoctor';
+// import Appointments from './components/Appointments';
 import Signup from './components/auth/signup';
 import Splashscreen from './components/auth/splash_screen';
 // import DeleteDoctor from './components/DeleteDoctor';
