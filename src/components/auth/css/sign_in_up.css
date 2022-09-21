@@ -53,7 +53,12 @@
 .form-group {
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 8px;
+}
+
+.form-group p {
+    color: black;
 }
 
 .form-control {
