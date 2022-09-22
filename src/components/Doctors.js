@@ -38,7 +38,12 @@ const Doctors = () => {
       <div className="doctors-li">
         <Carousel responsive={responsive} className="carousel-container" infinite>
           {data.map((doctor) => (
-            <SingleDoctor doctor={doctor} key={doctor.id} />
+            <SingleDoctor
+              name={doctor.name}
+              image={doctor.image}
+              id={doctor.id}
+              key={doctor.id}
+            />
           ))}
         </Carousel>
       </div>
