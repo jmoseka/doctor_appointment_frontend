@@ -26,7 +26,7 @@ const App = () => {
             <Route path="/appointments" element={<Appointments />} />
             <Route path="/new_appointment" element={<NewAppointment />} />
             <Route path="/delete_doctor" element={<DeleteDoctor />} />
-             <Route path="/doctor_details/:id" element={<DoctorDetails />} />
+            <Route path="/doctor_details/:id" element={<DoctorDetails />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </section>
