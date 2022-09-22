@@ -1,89 +1,49 @@
 import React from 'react';
 import './doctors.css';
-import { Link } from 'react-router-dom';
-import insta from '../images2/insta-icon-home.png';
-import fb from '../images2/fb-icon-home.png';
-import twitter from '../images2/twitter-icon-home.png';
-import doctor1 from '../images2/doctor1.jpg';
-import doctor2 from '../images2/doctor2.jpg';
-import doctor3 from '../images2/doctor3.jpg';
+import Carousel from 'react-multi-carousel';
+import data from './DoctorData';
+import SingleDoctor from './SingleDoctor';
+import 'react-multi-carousel/lib/styles.css';
 
-const social = [
-  { icon: insta },
-  { icon: fb },
-  { icon: twitter },
-];
+const Doctors = () => {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    laptop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
-const Doctors = () => (
-  <div>
-    <div className="doctors">
-      <h1>AVAILABLE DOCTORS</h1>
-      <p> Please select a doctor</p>
-    </div>
-    {/* <button type="button" className="btn btn-dark" onClick={handlePrevClick}>
-        {" "}
-        &larr; Previous
-      </button>  */}
-
-    <div className="doctors-list">
-      <div className="doctors1">
-        <img src={doctor1} alt="Profile of doctor" className="doctors-images" />
-        <h4>
-          {
-              // this is a link to the doctor's details page}
-            <Link to="/add_doctor">Dr. Mary Blackwell</Link>
-            }
-        </h4>
-        <p> Nothing is easy not until you try it</p>
-        <div className="social-net">
-          {social.map((item) => (
-            <a href="/" key={item.icon}>
-              <img src={item.icon} alt="social" className="w-8" />
-            </a>
-          ))}
-        </div>
+  return (
+    <div className="main-doctor-container">
+      <div className="doctors">
+        <h1 className="doctor-header">AVAILABLE DOCTORS</h1>
+        <p className="doctor-header-para"> Please select a doctor</p>
       </div>
-      <div className="doctors2">
-        <img src={doctor2} alt="profile of doctor" className="doctors-images" />
-        <h4>
-          {
-            // this is a link to the doctor's details page}
-            <Link to="/add_doctor">Dr. Wu Moon</Link>
-          }
-        </h4>
-
-        <p> Nothing is easy not until you try it</p>
-        <div className="social-net">
-          {social.map((item) => (
-            <a href="/" key={item.icon}>
-              <img src={item.icon} alt="social" className="w-8" />
-            </a>
+      <div className="doctors-li">
+        <Carousel responsive={responsive} className="carousel-container" infinite>
+          {data.map((doctor) => (
+            <SingleDoctor doctor={doctor} key={doctor.id} />
           ))}
-        </div>
-      </div>
-
-      <div className="doctors2">
-        <img src={doctor3} alt="profile of doctor" className="doctors-images" />
-        <h4>
-          {
-              // this is a link to the doctor's details page}
-            <Link to="/add_doctor">Dr. Ian Banda</Link>
-            }
-        </h4>
-        <p> Nothing is easy not until you try it</p>
-        <div className="social-net">
-          {social.map((item) => (
-            <a href="/" key={item.icon}>
-              <img src={item.icon} alt="social" className="w-8" />
-            </a>
-          ))}
-        </div>
+        </Carousel>
       </div>
     </div>
-    {/* <button type="button" className="btn btn-dark" onClick={handleNextClick}>
-        Next &rarr;
-      </button> */}
-  </div>
-);
+  );
+};
 
 export default Doctors;
