@@ -1,0 +1,15 @@
+.my-appointment-box {
+    background: rgb(241, 240, 240);
+    border-top-left-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.my-appointment-card p {
+    color: black;
+}
+
+.card {
+    width: 18rem;
+}
