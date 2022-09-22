@@ -15,7 +15,7 @@ import localStorages from './helpers/localStorage';
 const App = () => {
   const hasAccount = localStorages.getUser();
 
-  if (hasAccount.user) {
+  if (hasAccount?.user) {
     return (
       <div>
         <Navbar />
