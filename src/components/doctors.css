@@ -1,10 +1,3 @@
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .doctors {
   display: flex;
   flex-direction: column;
@@ -12,16 +5,119 @@ body {
   align-items: center;
 }
 
+.doctors1 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .doctors-images {
-  width: 70%;
+  width: 10rem;
   cursor: pointer;
+  margin-bottom: 4rem;
 }
 
 .doctors-list {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 6em;
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+.doctor-data {
+  margin-top: 2rem;
+}
+
+.social-net {
+  text-align: center;
+}
+
+.social-net img {
+  margin-right: 0.8rem;
+  width: 2rem;
+}
+
+.doctor-data h4 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.doctor-data p {
+  text-align: center;
+  margin: 0.7rem 0;
+}
+
+.single-image {
+  width: 22rem;
+}
+
+.doctor-container {
+  width: 100%;
+  padding: 0 10rem;
+  justify-content: space-between;
+  display: flex;
+  height: 100%;
+}
+
+.details {
+  justify-self: end;
+}
+
+.main-doctor-container {
+  width: 100%;
+}
+
+.image-div {
+  width: 10rem;
+  height: 10rem;
+  background-color: rgb(229 229 229);
+  padding: 6rem;
+  border-radius: 50%;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  width: 100%;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.carousel-container a {
+  all: unset;
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow {
+  color: #fff;
+  display: flex;
+  font-size: 0.5rem;
+  height: 3rem;
+  justify-content: flex-end;
+  margin-left: -3.5rem;
+  margin-right: -4rem;
+  width: 5rem;
+  background-color: #97bf0e !important;
+}
+
+.react-multiple-carousel__arrow--left {
+  border-radius: 0 4rem 4rem 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  border-radius: 4rem 0 0 4rem;
+}
+
+.react-multiple-carousel__arrow::before {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem 2rem 3rem 0;
+  cursor: pointer;
+  display: block;
 }

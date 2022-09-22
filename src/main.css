@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto:wght@400;700&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;900&family=Roboto:wght@400;700&family=Square+Peg&display=swap');
 
 :root {
   --light-green: #97bf0e;
@@ -26,7 +26,7 @@ body {
   width: 15vw;
   height: 100vh;
   border-right: 0.4px solid rgba(142, 142, 142, 0.2);
-  padding: 1rem 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
   position: fixed;
   display: block;
   top: 0;
@@ -80,9 +80,52 @@ body {
 
 /* main section */
 #main-sec {
-  position: absolute;
   margin-left: 15vw;
-  padding: 20px;
+  padding: 65px 1px 10px 1px;
+  width: 85%;
 }
 
 /* end of main section */
+
+/* details section */
+.details {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  margin-top: 5rem;
+}
+
+.details table {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.row {
+  background-color: rgb(225, 225, 225);
+}
+
+table td,
+table th {
+  padding: 10px;
+}
+
+table th {
+  padding: 10px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.detail-name,
+.doctor-header {
+  color: var(--black);
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.doctor-header-para {
+  margin-top: 1rem;
+  font-family: 'poppins', sans-serif;
+}
+
+/* end of details */
