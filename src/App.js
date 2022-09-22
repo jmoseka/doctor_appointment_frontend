@@ -7,7 +7,7 @@ import Signin from './components/auth/signin';
 import DeleteDoctor from './components/DeleteDoctor';
 import Doctors from './components/Doctors';
 import Navbar from './components/Navbar';
-import NewAppointment from './components/NewAppointment';
+import NewAppointment from './components/new-appointment/NewAppointment';
 import NotFound from './components/NotFound';
 import localStorages from './helpers/localStorage';
 
