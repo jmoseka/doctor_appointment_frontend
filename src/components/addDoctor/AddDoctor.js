@@ -13,6 +13,13 @@ const AddDoctor = () => {
   const [image, setImage] = useState('');
 
   const dispatch = useDispatch();
+  const doctorsName = document.getElementById('doctor-name');
+  const doctorsEmail = document.getElementById('doctor-email');
+  const doctorsSpeciality = document.getElementById('doctor-speciality');
+  const doctorsLocation = document.getElementById('doctor-location');
+  const doctorsBill = document.getElementById('doctor-bill');
+  const doctorsDescription = document.getElementById('doctor-description');
+  const doctorsImage = document.getElementById('doctor-image');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +33,7 @@ const AddDoctor = () => {
       image,
     };
     dispatch(createDoctorAction(doctor));
+    doctorsName.value = '';
   };
 
   return (
