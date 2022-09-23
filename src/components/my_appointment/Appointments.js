@@ -15,28 +15,31 @@ const Appointments = () => {
   return (
     <div className="my-appointment-container">
 
-      <div className="px-5 pb-2">
+      <div className="px-5 pb-2 text-center appointment-heading">
         <h2>My Appointments</h2>
       </div>
 
-      <div className="my-appointment-box py-5">
+      <div className="my-appointment-box py-3">
         {
 
           data.map((el) => (
-            <div className="my-appointment-card card m-5 p-3" key={el.docId}>
-              <h4 className="p-2">
-                Doctor
-                {el.doctorName}
-              </h4>
-              <h5 className="p-2">
-                Reservation Date:
-                {' '}
-                {el.dateReserved}
-              </h5>
-              <h5 className="p-2">
-                City:
-                {el.cityName}
-              </h5>
+            <div className="my-appointment-card card m-2 d-flex" key={el.docId}>
+              <div className="p-3">
+                <h5 className="p-2 text-center doc-name">
+                  Doctor
+                  {` ${el.doctorName}`}
+                </h5>
+                <h5 className="p-2">
+                  <span className="reserve me-2">Reservation Date:</span>
+                  {' '}
+                  {el.dateReserved}
+                </h5>
+                <h5 className="p-2">
+                  <span className="city me-2">City: </span>
+                  {el.cityName}
+                </h5>
+              </div>
+              <button type="submit" className="delete-appointment">DELETE</button>
             </div>
 
           ))
