@@ -31,6 +31,7 @@ body {
   display: block;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .logo {
@@ -80,7 +81,8 @@ body {
 
 /* main section */
 #main-sec {
-  margin-left: 15vw;
+  position: absolute;
+  margin-left: 310px;
   padding: 65px 1px 10px 1px;
   width: 85%;
 }

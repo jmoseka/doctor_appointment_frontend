@@ -1,0 +1,45 @@
+.appointment-heading h2 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
+}
+
+.my-appointment-container {
+  font-family: 'Lato', sans-serif;
+}
+
+.my-appointment-box {
+  border: 4px solid whitesmoke;
+  width: 90%;
+}
+
+.card {
+  background: white;
+  color: black;
+}
+
+.card-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.my-appointment-card p {
+  color: white;
+}
+
+/** card style */
+
+.reserve,
+.city {
+  color: rgb(187, 187, 187);
+}
+
+.delete-appointment {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background: #617c00;
+}
+
+.delete-appointment:hover {
+  background: red;
+}
