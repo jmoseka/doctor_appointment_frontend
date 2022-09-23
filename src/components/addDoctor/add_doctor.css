@@ -27,7 +27,6 @@
   background: #97bf0e;
 }
 
-
 .doc-form {
   width: 100%;
   height: auto;
@@ -59,19 +58,17 @@ textarea {
 
 form {
   border: 1px solid whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
 }
 
 @media (max-width: 800px) {
   .doc-container-form {
     width: 100%;
+    justify-content: space-between;
   }
 
   .form-group {
     width: 90%;
   }
 
-  .doc-container-form {
-    justify-content: space-between;
-  }
 }
