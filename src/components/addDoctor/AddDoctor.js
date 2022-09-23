@@ -36,6 +36,8 @@ const AddDoctor = () => {
     doctorsName.value = '';
     doctorsEmail.value = '';
     doctorsSpeciality.value = '';
+    doctorsLocation.value = '';
+    doctorsBill.value = '';
   };
 
   return (
