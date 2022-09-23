@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { NotificationContainer } from 'react-notifications';
 import AddDoctor from './components/addDoctor/AddDoctor';
 import Appointments from './components/Appointments';
 import Signup from './components/auth/signup';
@@ -11,6 +12,7 @@ import Navbar from './components/Navbar';
 import NewAppointment from './components/new-appointment/NewAppointment';
 import NotFound from './components/NotFound';
 import localStorages from './helpers/localStorage';
+import 'react-notifications/lib/notifications.css';
 
 const App = () => {
   const hasAccount = localStorages.getUser();
@@ -18,6 +20,7 @@ const App = () => {
   if (hasAccount?.user) {
     return (
       <div>
+        <NotificationContainer />
         <Navbar />
         <section id="main-sec">
           <Routes>
