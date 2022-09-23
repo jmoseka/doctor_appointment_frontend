@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './add_doctor.css';
 
 const AddDoctor = () => (
@@ -35,21 +35,46 @@ const AddDoctor = () => (
               <input type="text" name="image" id="doctor-image" className="form-control rounded-pill" placeholder="Enter an image url link" required />
             </div>
 
-            <div className="text-center mt-4">
-              <button
-                type="submit"
-                name="submit-item"
-                id="doctor-submit"
-                className="text-center rounded-pill"
-              >
-                SUBMIT
-              </button>
+            <div className="form-group">
+              <p htmlFor="location" className="ms-4 mb-1">Location</p>
+              <input type="text" name="location" id="doctor-location" className="form-control rounded-pill" placeholder="Enter your location" required />
+
             </div>
-          </form>
-        </div>
+
+            <div className="form-group">
+              <p htmlFor="bill" className="ms-4 mb-1">Bill</p>
+              <input type="number" name="bill" id="doctor-bill" className="form-control rounded-pill" placeholder="Enter your bill" required />
+
+            </div>
+
+            <div className="form-group ms-4 reserve-radio">
+              <p className="text-start mb-1">Are you reserved? </p>
+              <p className="ms-5 mb-1">
+                <input type="radio" name="reserve-yes" className="rounded-pill input-radio" checked required />
+                Yes
+              </p>
+              <p className="ms-5 mb-1">
+                <input type="radio" name="reserve-no" className="rounded-pill input-radio" required />
+                No
+              </p>
+            </div>
+
+            <div className="form-group">
+              <p htmlFor="description" className="ms-3 mb-1">Description</p>
+              <textarea name="description" id="doctor-description" className="form-control" placeholder="Enter a brief description" required />
+
+            </div>
+          </div>
+
+          <div className="text-center mt-4">
+            <input type="submit" name="submit-item" id="doctor-submit" className="text-center rounded-pill" value="SUBMIT" />
+
+          </div>
+
+        </form>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default AddDoctor;
