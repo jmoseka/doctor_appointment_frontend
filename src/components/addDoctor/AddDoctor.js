@@ -38,6 +38,8 @@ const AddDoctor = () => {
     doctorsSpeciality.value = '';
     doctorsLocation.value = '';
     doctorsBill.value = '';
+    doctorsDescription.value = '';
+    doctorsImage.value = '';
   };
 
   return (
