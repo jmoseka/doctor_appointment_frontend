@@ -35,6 +35,7 @@ const AddDoctor = () => {
     dispatch(createDoctorAction(doctor));
     doctorsName.value = '';
     doctorsEmail.value = '';
+    doctorsSpeciality.value = '';
   };
 
   return (
