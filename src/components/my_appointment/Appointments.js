@@ -23,12 +23,12 @@ const Appointments = () => {
         {
 
           data.map((el) => (
-            <div className="my-appointment-card card m-2 d-flex" key={el.docId}>
-              <div className="p-3">
-                <h5 className="p-2 text-center doc-name">
+            <div className="my-appointment-card card m-2" key={el.docId}>
+              <div className="p-3 d-flex card-box">
+                <h4 className="p-2 doc-name">
                   Doctor
                   {` ${el.doctorName}`}
-                </h5>
+                </h4>
                 <h5 className="p-2">
                   <span className="reserve me-2">Reservation Date:</span>
                   {' '}

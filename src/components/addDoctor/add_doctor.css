@@ -1,12 +1,15 @@
-
 .doc-container-form {
-  width: 90%;
   display: flex;
   flex-direction: column;
 }
 
 .form-container {
   width: 100%;
+}
+
+.form-title h2 {
+  font-family: 'poppins', sans-serif;
+  font-weight: 900;
 }
 
 #doctor-submit {
@@ -24,9 +27,6 @@
   background: #97bf0e;
 }
 
-form {
-  background-color: rgba(162, 204, 23, 0.486);
-}
 
 .doc-form {
   width: 100%;
@@ -52,10 +52,19 @@ form {
   align-self: flex-start;
 }
 
+textarea {
+  min-height: 10rem;
+  max-height: 10rem;
+}
+
+form {
+  border: 1px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 @media (max-width: 800px) {
-  .doc-form {
-    flex-direction: column;
-    align-items: center;
+  .doc-container-form {
+    width: 100%;
   }
 
   .form-group {
@@ -64,13 +73,5 @@ form {
 
   .doc-container-form {
     justify-content: space-between;
-    margin-left: 150px;
-  }
-}
-
-@media (min-width: 800px) {
-  .doc-container-form {
-    justify-content: space-between;
-    margin-left: 150px;
   }
 }
