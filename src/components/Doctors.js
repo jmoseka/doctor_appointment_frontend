@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './doctors.css';
 import Carousel from 'react-multi-carousel';
-import data from './DoctorData';
 import SingleDoctor from './SingleDoctor';
 import 'react-multi-carousel/lib/styles.css';
+import { getDoctorsAction } from '../redux/doctorReduce/doctors';
 
 const Doctors = () => {
+  const doctors = useSelector((state) => state.doctor);
+  const dispatch = useDispatch();
+  // const [doctors, setDoctors] = useState([]);
+  useEffect(() => {
+    dispatch(getDoctorsAction());
+  }, [dispatch]);
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -36,11 +44,18 @@ const Doctors = () => {
         <p className="doctor-header-para"> Please select a doctor</p>
       </div>
       <div className="doctors-li">
-        <Carousel responsive={responsive} className="carousel-container" infinite>
-          {data.map((doctor) => (
+        <Carousel
+          responsive={responsive}
+          className="carousel-container"
+          infinite
+        >
+          {doctors.map((doctor) => (
             <SingleDoctor
               name={doctor.name}
               image={doctor.image}
+              speciality={doctor.speciality}
+              city={doctor.location}
+              description={doctor.description}
               id={doctor.id}
               key={doctor.id}
             />

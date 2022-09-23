@@ -10,7 +10,7 @@ const DoctorDetails = () => {
   } = doctor;
 
   return (
-    <div className="doctor-container">
+    <div id="RouterNavLink" className="doctor-container">
       <div className="image-container">
         <img src={image} alt="Profile of doctor" className="single-image" />
       </div>

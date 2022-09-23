@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { NotificationContainer } from 'react-notifications';
 import AddDoctor from './components/addDoctor/AddDoctor';
 // import Signup from './components/auth/signup';
 // import Splashscreen from './components/auth/splash_screen';
@@ -10,33 +11,35 @@ import Appointments from './components/my_appointment/Appointments';
 import Navbar from './components/Navbar';
 import NewAppointment from './components/new-appointment/NewAppointment';
 import NotFound from './components/NotFound';
-// import localStorages from './helpers/localStorage';
+import localStorages from './helpers/localStorage';
+import 'react-notifications/lib/notifications.css';
 
 const App = () => (
 // const hasAccount = localStorages.getUser();
 
-  // if (hasAccount.user) {
-  //   return (
-  //     <div>
-  //       <Navbar />
-  //       <section id="main-sec">
-  //         <Routes>
-  //           <Route path="/" element={<Doctors />} />
-  //           <Route path="/add_doctor" element={<AddDoctor />} />
-  //           <Route path="/appointments" element={<Appointments />} />
-  //           <Route path="/new_appointment" element={<NewAppointment />} />
-  //           <Route path="/delete_doctor" element={<DeleteDoctor />} />
-  //           <Route path="/doctor_details/:id" element={<DoctorDetails />} />
-  //           <Route path="/*" element={<NotFound />} />
-  //         </Routes>
-  //       </section>
-  //     </div>
-  //   );
-  // }
 
-  <div>
-    <Navbar />
-    <section id="main-sec">
+  if (hasAccount?.user) {
+    return (
+      <div>
+        <NotificationContainer />
+        <Navbar />
+        <section id="main-sec">
+          <Routes>
+            <Route path="/" element={<Doctors />} />
+            <Route path="/add_doctor" element={<AddDoctor />} />
+            <Route path="/appointments" element={<Appointments />} />
+            <Route path="/new_appointment" element={<NewAppointment />} />
+            <Route path="/delete_doctor" element={<DeleteDoctor />} />
+            <Route path="/doctor_details/:id" element={<DoctorDetails />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
+        </section>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <Splashscreen />
       <Routes>
         <Route path="/" element={<Doctors />} />
         <Route path="/add_doctor" element={<AddDoctor />} />
