@@ -4,7 +4,7 @@ import AddDoctor from './components/addDoctor/AddDoctor';
 import Signup from './components/auth/signup';
 import Splashscreen from './components/auth/splash_screen';
 import Signin from './components/auth/signin';
-import DeleteDoctor from './components/DeleteDoctor';
+import DeleteDoctor from './components/delete_doctor/DeleteDoctor';
 import DoctorDetails from './components/DoctorDetails';
 import Doctors from './components/Doctors';
 import Navbar from './components/Navbar';
