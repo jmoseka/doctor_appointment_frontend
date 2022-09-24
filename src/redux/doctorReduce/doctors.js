@@ -56,7 +56,7 @@ export const createDoctorAction = (payload) => async (dispatch) => {
 
 export const deleteDoctorAction = (payload) => async (dispatch) => {
   axios
-    .delete(`api/v1doctors/${payload}`)
+    .delete(`api/v1/doctors/${payload}`)
     .then((res) => {
       dispatch(deleteDoctor(res.data));
     });
