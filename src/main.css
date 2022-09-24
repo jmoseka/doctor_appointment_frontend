@@ -23,10 +23,9 @@ body {
 /* navbar */
 .navbar {
   min-width: 250px;
-  width: 15vw;
   height: 100vh;
   border-right: 0.4px solid rgba(142, 142, 142, 0.2);
-  padding: 0 1rem 0 1rem;
+  padding: 0 0.5rem 0 0.5rem;
   position: fixed;
   display: block;
   top: 0;
@@ -74,15 +73,15 @@ body {
 .copyright {
   position: absolute;
   bottom: 1rem;
+  padding: 0 2rem;
 }
 
 /* end of navbar */
 
 /* main section */
 #main-sec {
-  margin-left: 15vw;
-  padding: 65px 1px 10px 1px;
-  width: 85%;
+  display: absolute;
+  margin-left: 250px;
 }
 
 /* end of main section */
@@ -99,7 +98,7 @@ body {
   width: 100%;
 }
 
-.row {
+.col {
   background-color: rgb(225, 225, 225);
 }
 
