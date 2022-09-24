@@ -19,12 +19,12 @@ const Appointments = () => {
         <h2>My Appointments</h2>
       </div>
 
-      <div className="my-appointment-box py-3">
+      <div className="my-appointment-box p-5">
         {
 
           data.map((el) => (
             <div className="my-appointment-card card m-2" key={el.docId}>
-              <div className="p-5 d-flex card-box">
+              <div className="p-5 d-flex card-box flex-column flex-md-row">
                 <h4 className="p-2 doc-name">
                   Doctor
                   {` ${el.doctorName}`}

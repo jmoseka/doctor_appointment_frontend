@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import axios from 'axios';
+import localStorages from '../../helpers/localStorage';
 
 const GET_DATA = 'doctor_appointment_frontend/my_appointment/getData';
 
@@ -8,8 +9,10 @@ export const getData = (payload) => ({
   payload,
 });
 
+const { id } = localStorages.getUser().user;
+
 export const fetchData = () => async (dispatch) => {
-  const url = 'http://127.0.0.1:3000/api/v1/users/3/reservations';
+  const url = `http://127.0.0.1:3000/api/v1/users/${id}/reservations`;
   const response = await axios.get(url);
   const data = await response.data;
   const arr = [];
