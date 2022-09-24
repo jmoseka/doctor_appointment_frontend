@@ -48,7 +48,7 @@ export const createDoctorAction = (payload) => async (dispatch) => {
     .catch((error) => {
       dispatch(createDoctor(error.response.data));
       NotificationManager.error(
-        'Error while creating new book!',
+        'Error while creating new Doctor!',
         'Error!',
       );
     });
