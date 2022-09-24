@@ -1,5 +1,5 @@
+import { NotificationManager } from 'react-notifications';
 import axios from '../../config/axios';
-
 // const BASE_URL = 'http://localhost:3000/api/v1/doctors;
 
 const GET_DOCTORS = 'DOCTOR_APPOINTMENT/GET_DOCTORS';
@@ -39,9 +39,18 @@ export const createDoctorAction = (payload) => async (dispatch) => {
     .post('api/v1/doctors', payload)
     .then((res) => {
       dispatch(createDoctor(res.data));
+      NotificationManager.success(
+        'You have added a new Doctor!',
+        'Successful!',
+        2000,
+      );
     })
     .catch((error) => {
       dispatch(createDoctor(error.response.data));
+      NotificationManager.error(
+        'Error while creating new book!',
+        'Error!',
+      );
     });
 };
 
