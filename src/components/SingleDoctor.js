@@ -21,7 +21,7 @@ const SingleDoctor = ({
       <div className="doctor-data">
         <h4>{name}</h4>
         <p>.........................</p>
-        <h4>{speciality}</h4>
+        <p>{speciality}</p>
         <p>
           {description}
         </p>
