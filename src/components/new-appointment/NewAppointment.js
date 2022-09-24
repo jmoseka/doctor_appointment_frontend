@@ -29,8 +29,6 @@ const NewAppointment = () => {
     dispatch(reserveAction(data));
   };
 
-  console.log(userId.user.id);
-
   return (
     <div className=" reserveContainer ">
       <div>
