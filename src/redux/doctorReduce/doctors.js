@@ -48,7 +48,7 @@ export const createDoctorAction = (payload) => async (dispatch) => {
     .catch((error) => {
       dispatch(createDoctor(error.response.data));
       NotificationManager.error(
-        'Error while creating new book!',
+        'Error while creating new Doctor!',
         'Error!',
       );
     });
@@ -56,7 +56,7 @@ export const createDoctorAction = (payload) => async (dispatch) => {
 
 export const deleteDoctorAction = (payload) => async (dispatch) => {
   axios
-    .delete(`api/v1doctors/${payload}`)
+    .delete(`api/v1/doctors/${payload}`)
     .then((res) => {
       dispatch(deleteDoctor(res.data));
     });

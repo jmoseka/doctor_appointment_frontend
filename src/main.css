@@ -129,3 +129,7 @@ table th {
 }
 
 /* end of details */
+.nav-logout {
+  background-color: #f00;
+  color: #fff !important;
+}
