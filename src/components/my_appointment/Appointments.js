@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../../redux/my_appointment_redux/my_appointment';
+import { deleteAppointmentAction, fetchData } from '../../redux/my_appointment_redux/my_appointment';
 import './css/appointment.css';
 
 const Appointments = () => {
@@ -10,7 +10,24 @@ const Appointments = () => {
   useEffect(() => {
     dispatch(fetchData());
   }, []);
-  const data = useSelector((state) => state.my_appointment);
+  let data = [];
+
+  function updateAppointment() {
+    data = useSelector((state) => state.my_appointment);
+    console.log(data);
+  }
+
+  updateAppointment();
+  // function addAppointment(data) {
+  //   console.log(data);
+  //   setAppointment([...appointment, data]);
+  //   console.log(appointment);
+  // }
+
+  const deleteAppointment = (id) => {
+    dispatch(deleteAppointmentAction(id));
+    updateAppointment();
+  };
 
   return (
     <div className="my-appointment-container">
@@ -23,7 +40,7 @@ const Appointments = () => {
         {
 
           data.map((el) => (
-            <div className="my-appointment-card card m-2" key={el.docId}>
+            <div className="my-appointment-card card m-2" key={el.appointmentId}>
               <div className="p-5 d-flex card-box flex-column flex-md-row">
                 <h4 className="p-2 doc-name">
                   Doctor
@@ -39,7 +56,7 @@ const Appointments = () => {
                   {el.cityName}
                 </h5>
               </div>
-              <button type="submit" className="delete-appointment">DELETE</button>
+              <button type="submit" onClick={() => deleteAppointment(el.appointmentId)} className="delete-appointment">DELETE</button>
             </div>
 
           ))

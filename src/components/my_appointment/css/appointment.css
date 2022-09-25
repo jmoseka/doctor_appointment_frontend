@@ -22,6 +22,10 @@
   justify-content: space-evenly;
 }
 
+
+.doc-name {
+  font-weight: bold;
+}
 .my-appointment-card p {
   color: white;
 }
@@ -30,7 +34,9 @@
 
 .reserve,
 .city {
-  color: rgb(187, 187, 187);
+  color: rgb(168, 166, 166);
+  font-weight: 600;
+
 }
 
 .delete-appointment {
@@ -38,6 +44,7 @@
   outline: none;
   border: none;
   background: #617c00;
+  color: white;
 }
 
 .delete-appointment:hover {
