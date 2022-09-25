@@ -129,6 +129,18 @@ table th {
 
 /* end of details */
 .nav-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f00;
+  color: #fff;
+}
+
+.fa-solid {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.nav-logout a {
   color: #fff !important;
 }
