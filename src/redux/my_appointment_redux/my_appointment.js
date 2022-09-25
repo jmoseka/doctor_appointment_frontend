@@ -4,11 +4,25 @@ import axios from '../../config/axios';
 
 const GET_DATA = 'doctor_appointment_frontend/my_appointment/getData';
 const CREATE_RESERVE = 'doctor_appointment_frontend/my_appointment/RESERVE';
+const DELETE_APPOINTMENT = 'doctor_appointment_frontend/my_appointment/deleteAppointment';
 
 export const getData = (payload) => ({
   type: GET_DATA,
   payload,
 });
+
+export const deleteAppointment = (id) => ({
+  type: DELETE_APPOINTMENT,
+  id,
+});
+
+export const deleteAppointmentAction = (payload) => async (dispatch) => {
+  axios
+    .delete(`http://127.0.0.1:3000/api/v1/users/3/reservations/${payload}`)
+    .then((res) => {
+      dispatch(deleteAppointment(res.data));
+    });
+};
 
 export const createReserve = (payload) => ({
   type: CREATE_RESERVE,
@@ -56,6 +70,8 @@ export default function myAppointmentReducer(state = [], action) {
       return action.payload;
     case CREATE_RESERVE:
       return [...state, action.payload];
+    case DELETE_APPOINTMENT:
+      return state.filter((appointment) => appointment.appointmentId !== action.payload.id);
     default:
       return state;
   }
