@@ -2,9 +2,9 @@ import React from 'react';
 import './add_doctor.css';
 
 const AddDoctor = () => (
-  <div className="add-doc-container py-5 d-flex justify-content-center">
+  <div className="add-doc-container d-flex justify-content-center">
     <div className="doc-container-form">
-      <div className="form-title">
+      <div className="form-title text-center pb-4">
         <h2>Add doctor</h2>
       </div>
 
