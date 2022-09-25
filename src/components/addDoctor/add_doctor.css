@@ -1,6 +1,9 @@
 .doc-container-form {
   display: flex;
   flex-direction: column;
+  padding-top: 2rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .form-container {
