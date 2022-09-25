@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../../redux/my_appointment_redux/my_appointment';
+import { deleteAppointmentAction, fetchData } from '../../redux/my_appointment_redux/my_appointment';
 import './css/appointment.css';
 
 const Appointments = () => {
@@ -11,6 +11,10 @@ const Appointments = () => {
     dispatch(fetchData());
   }, []);
   const data = useSelector((state) => state.my_appointment);
+
+  const deleteAppointment = (id) => {
+    dispatch(deleteAppointmentAction(id));
+  };
 
   return (
     <div className="my-appointment-container">
@@ -23,7 +27,7 @@ const Appointments = () => {
         {
 
           data.map((el) => (
-            <div className="my-appointment-card card m-2" key={el.docId}>
+            <div className="my-appointment-card card m-2" key={el.appo}>
               <div className="p-5 d-flex card-box">
                 <h4 className="p-2 doc-name">
                   Doctor
@@ -39,7 +43,7 @@ const Appointments = () => {
                   {el.cityName}
                 </h5>
               </div>
-              <button type="submit" className="delete-appointment">DELETE</button>
+              <button type="submit" onClick={() => deleteAppointment(el.appointmentId)} className="delete-appointment">DELETE</button>
             </div>
 
           ))
