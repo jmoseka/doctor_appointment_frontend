@@ -16,7 +16,6 @@ import Appointments from './components/my_appointment/Appointments';
 
 const App = () => {
   const hasAccount = localStorages.getUser();
-  // console.log('have', localStorages.getUser().user).getItem('user');
 
   if (hasAccount?.user) {
     return (
@@ -41,6 +40,7 @@ const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Splashscreen />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
       </Routes>
