@@ -187,3 +187,15 @@ table th {
 .show {
   display: block;
 }
+
+.btn-details {
+  background-color: #97bf0e;
+  border: none;
+  color: #fff;
+}
+
+.btn-details:hover {
+  background-color: #708e0e !important;
+  border: none;
+  color: #fff !important;
+}
