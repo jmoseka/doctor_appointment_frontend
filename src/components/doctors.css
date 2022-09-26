@@ -24,6 +24,11 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.close-btn-container:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
 .doctor-data {

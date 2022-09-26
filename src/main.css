@@ -30,7 +30,6 @@ body {
   display: block;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 .logo {
@@ -143,4 +142,48 @@ table th {
 
 .nav-logout a {
   color: #fff !important;
+}
+
+.close-btn-container {
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 0.5rem;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  left: 250px;
+  bottom: 1rem;
+  color: #fff;
+  background-color: #afd828;
+  border-radius: 0 4rem 4rem 0;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.close-arrow {
+  height: 2rem;
+  width: 2rem;
+  margin: 2rem;
+  cursor: pointer;
+  display: block;
+  transform: rotate(-90deg);
+  text-shadow: 0.2rem 0.2rem;
+}
+
+.bars {
+  font-weight: bold;
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
