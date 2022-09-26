@@ -20,7 +20,7 @@ const Appointments = () => {
   return (
     <div className="my-appointment-container">
 
-      <div className="px-5 pb-2 text-center appointment-heading">
+      <div className="px-5 pb-2 text-center appointment-heading mt-5">
         <h2>My Appointments</h2>
       </div>
 
