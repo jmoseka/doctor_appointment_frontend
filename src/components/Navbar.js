@@ -1,6 +1,7 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import { GiTriangleTarget } from 'react-icons/gi';
 import { logout } from '../redux/auth/login';
 
 const Navbar = () => {
@@ -8,8 +9,23 @@ const Navbar = () => {
   const logOut = useCallback(() => {
     dispatch(logout());
   }, [dispatch]);
+
+  const [classValue, setClassValue] = useState('hide');
+  const toggleMenu = () => {
+    if (classValue === 'show') {
+      setClassValue('hide');
+    } else {
+      setClassValue('show');
+    }
+  };
+
+  if (classValue === 'hide') {
+    return (
+      <div className="bars" onClick={() => toggleMenu()} role="presentation"><i className="fa fa-bars" /></div>
+    );
+  }
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${classValue}`}>
       <div className="logo-container">
         <Link to="/">
           <img src="./images/logo.png" className="logo" alt="logo" />
@@ -57,8 +73,8 @@ const Navbar = () => {
               Delete a Doctor
             </NavLink>
           </li>
-
           <li className="nav-logout">
+            <i className="fa-solid fa-right-from-bracket" />
             <a href="/signin" className="nav-link" onClick={logOut}>
               LogOut
             </a>
@@ -66,7 +82,11 @@ const Navbar = () => {
         </ul>
       </div>
       <p className="copyright">&copy; Microverse 2022</p>
+      <div className="close-btn-container">
+        <GiTriangleTarget className="close-arrow" onClick={() => toggleMenu()} />
+      </div>
     </nav>
   );
 };
+
 export default Navbar;

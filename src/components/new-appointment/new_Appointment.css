@@ -1,17 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;900&family=Roboto:wght@400;700&family=Square+Peg&display=swap');
 
 .reserveContainer {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, #83cc16e5, #83cc16b6), url(../auth/css/onlinedoc.jpg) no-repeat 50%;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(151, 191, 14, 0.8), rgba(149, 190, 14, 0.8)), url(../auth/css/onlinedoc.jpg) no-repeat 50%;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
   display: flex;
+  padding: 8rem;
   align-items: center;
 }
 
@@ -24,16 +22,20 @@ body {
 }
 
 .reserveFormHeading {
+  font-family: 'poppins', sans-serif;
   border-bottom-style: solid;
-  border-bottom-width: 3px;
+  border-bottom-width: 1px;
   font-weight: 700;
   padding-bottom: 15px;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
 }
 
 .resrve-header {
-  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -71,11 +73,8 @@ body {
   border-radius: 50px;
   background-color: #fff;
   color: #83cc16b6 !important;
-  color: #fff;
   border: 2px solid #fff;
-  gap: 10px;
+  width: 15rem;
   margin-top: 20px;
-  padding: 16px;
-
-  /* margin: auto 0; */
+  padding: 8px;
 }

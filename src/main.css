@@ -23,15 +23,13 @@ body {
 /* navbar */
 .navbar {
   min-width: 250px;
-  width: 15vw;
   height: 100vh;
   border-right: 0.4px solid rgba(142, 142, 142, 0.2);
-  padding: 0 1rem 0 1rem;
+  padding: 0 0.5rem 0 0.5rem;
   position: fixed;
   display: block;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 .logo {
@@ -49,6 +47,10 @@ body {
 
 .navbar ul li {
   margin: 1rem 0;
+}
+
+.nav-logout li a {
+  color: #fff !important;
 }
 
 .navbar ul li a {
@@ -75,16 +77,14 @@ body {
 .copyright {
   position: absolute;
   bottom: 1rem;
+  padding: 0 2rem;
 }
 
 /* end of navbar */
 
 /* main section */
 #main-sec {
-  position: absolute;
-  margin-left: 310px;
-  padding: 65px 1px 10px 1px;
-  width: 85%;
+  margin-left: 250px;
 }
 
 /* end of main section */
@@ -101,7 +101,7 @@ body {
   width: 100%;
 }
 
-.row {
+.col {
   background-color: rgb(225, 225, 225);
 }
 
@@ -132,6 +132,58 @@ table th {
 
 /* end of details */
 .nav-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #f00;
-  color: #fff !important;
+  color: #fff;
+}
+
+.fa-solid {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.close-btn-container {
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 0.5rem;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  left: 250px;
+  bottom: 1rem;
+  color: #fff;
+  background-color: #afd828;
+  border-radius: 0 4rem 4rem 0;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.close-arrow {
+  height: 2rem;
+  width: 2rem;
+  margin: 2rem;
+  cursor: pointer;
+  display: block;
+  transform: rotate(-90deg);
+  text-shadow: 0.2rem 0.2rem;
+}
+
+.bars {
+  font-weight: bold;
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

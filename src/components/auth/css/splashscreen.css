@@ -8,6 +8,7 @@
   background-size: cover;
 }
 
+/*
 a {
   color: white;
   text-decoration: none;
@@ -15,14 +16,7 @@ a {
 
 a:hover {
   color: white;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-
-  /* color: white; */
-}
+} */
 
 .logo-text-style {
   color: rgb(245, 199, 2);

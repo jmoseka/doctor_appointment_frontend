@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import data from './DoctorData';
+import { getDoctorsAction } from '../redux/doctorReduce/doctors';
 
 const DoctorDetails = () => {
+  const doctors = useSelector((state) => state.doctor);
+  const dispatch = useDispatch();
+  // const [doctors, setDoctors] = useState([]);
+  useEffect(() => {
+    dispatch(getDoctorsAction());
+  }, [dispatch]);
+
   const params = useParams();
-  const doctor = data.find((doctor) => doctor.id === Number(params.id));
+  const doctor = doctors.find((doctor) => doctor.id === Number(params.id));
   const {
     image, name, speciality, email, description, bill,
   } = doctor;
@@ -18,7 +26,7 @@ const DoctorDetails = () => {
         <h4 className="detail-name">{name}</h4>
         <p>{description}</p>
         <table>
-          <tr className="row">
+          <tr className="col">
             <th>Speciality</th>
             <td>{speciality}</td>
           </tr>
@@ -26,7 +34,7 @@ const DoctorDetails = () => {
             <th>Email</th>
             <td>{email}</td>
           </tr>
-          <tr className="row">
+          <tr className="col">
             <th>Bill</th>
             <td>{bill}</td>
           </tr>
