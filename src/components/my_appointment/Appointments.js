@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 
 import React, { useEffect, useState } from 'react';
@@ -13,14 +14,23 @@ const Appointments = () => {
   }, []);
   const data = useSelector((state) => state.my_appointment);
   localStorage.setItem('my_appointment', JSON.stringify(data));
+
   // eslint-disable-next-line no-unused-vars
   useEffect(() => { setAppointment(JSON.parse(localStorage.getItem('my_appointment'))); }, [localStorage.getItem('my_appointment')]);
+  const listAppoitment = JSON.parse(localStorage.getItem('my_appointment'));
 
-  console.log('appointment', appointment);
-  console.log(localStorage.getItem('my_appointment'));
-
-  const deleteAppointment = (id) => {
+  const deleteAppointment = (e, id) => {
     dispatch(deleteAppointmentAction(id));
+    const newArr = listAppoitment.filter((object) => object.appointmentId !== id);
+    localStorage.setItem('my_appointment', JSON.stringify(newArr));
+    e.target.parentNode.remove();
+  };
+
+  let sum = 0;
+
+  const giveIndex = () => {
+    sum += 1;
+    return sum;
   };
 
   return (
@@ -33,8 +43,8 @@ const Appointments = () => {
       <div className="my-appointment-box py-3">
         {
 
-          appointment.map((el) => (
-            <div className="my-appointment-card card m-2" key={el.appo}>
+          data.map((el) => (
+            <div className="my-appointment-card card m-2" key={el.appointmentId}>
               <div className="p-5 d-flex card-box">
                 <h4 className="p-2 doc-name">
                   Doctor
@@ -50,7 +60,7 @@ const Appointments = () => {
                   {el.cityName}
                 </h5>
               </div>
-              <button type="submit" onClick={() => deleteAppointment(el.appointmentId)} className="delete-appointment">DELETE</button>
+              <button type="submit" id={`${giveIndex() - 1}`} onClick={(e) => deleteAppointment(e, el.appointmentId)} className="delete-appointment">DELETE</button>
             </div>
 
           ))
