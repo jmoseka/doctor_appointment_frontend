@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './doctors.css';
 import Carousel from 'react-multi-carousel';
@@ -50,15 +51,17 @@ const Doctors = () => {
           infinite
         >
           {doctors.map((doctor) => (
-            <SingleDoctor
-              name={doctor.name}
-              image={doctor.image}
-              speciality={doctor.speciality}
-              city={doctor.location}
-              description={doctor.description}
-              id={doctor.id}
-              key={doctor.id}
-            />
+            <div key={doctor.id}>
+              <Link to={`/doctor_details/${doctor.id}`}>
+                <SingleDoctor
+                  name={doctor.name}
+                  image={doctor.image}
+                  speciality={doctor.speciality}
+                  city={doctor.location}
+                  description={doctor.description}
+                />
+              </Link>
+            </div>
           ))}
         </Carousel>
       </div>
