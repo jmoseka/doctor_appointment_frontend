@@ -21,7 +21,7 @@ function Signin() {
     dispatch(LoginUserAction(user));
     setTimeout(() => {
       window.location.reload();
-    }, 500);
+    }, 800);
   };
   return (
     <div className="container-signup d-md-flex">
