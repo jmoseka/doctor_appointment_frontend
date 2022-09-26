@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { LoginUserAction } from '../../redux/auth/login';
 import './css/sign_in_up.css';
 
 function Signin() {
-  const navigate = useNavigate();
   const notify = () => {
     toast('Logged in successfully.');
   };
@@ -23,7 +22,6 @@ function Signin() {
     };
     dispatch(LoginUserAction(user));
     user.login = true;
-    navigate('/');
   };
   return (
     <div className="container-signup d-md-flex">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './css/sign_in_up.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { SignUpAction } from '../../redux/auth/register';
 
@@ -10,7 +10,6 @@ function Signup() {
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +19,6 @@ function Signup() {
       password,
     };
     dispatch(SignUpAction(user));
-    navigate('/');
   };
 
   return (
