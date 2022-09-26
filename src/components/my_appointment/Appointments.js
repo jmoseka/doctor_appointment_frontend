@@ -1,16 +1,23 @@
 /* eslint-disable camelcase */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAppointmentAction, fetchData } from '../../redux/my_appointment_redux/my_appointment';
 import './css/appointment.css';
 
 const Appointments = () => {
+  const [appointment, setAppointment] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchData());
   }, []);
   const data = useSelector((state) => state.my_appointment);
+  localStorage.setItem('my_appointment', JSON.stringify(data));
+  // eslint-disable-next-line no-unused-vars
+  useEffect(() => { setAppointment(JSON.parse(localStorage.getItem('my_appointment'))); }, [localStorage.getItem('my_appointment')]);
+
+  console.log('appointment', appointment);
+  console.log(localStorage.getItem('my_appointment'));
 
   const deleteAppointment = (id) => {
     dispatch(deleteAppointmentAction(id));
@@ -26,7 +33,7 @@ const Appointments = () => {
       <div className="my-appointment-box py-3">
         {
 
-          data.map((el) => (
+          appointment.map((el) => (
             <div className="my-appointment-card card m-2" key={el.appo}>
               <div className="p-5 d-flex card-box">
                 <h4 className="p-2 doc-name">
