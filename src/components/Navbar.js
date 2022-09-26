@@ -75,7 +75,7 @@ const Navbar = () => {
           </li>
           <li className="nav-logout">
             <i className="fa-solid fa-right-from-bracket" />
-            <a href="/signin" className="nav-link" onClick={logOut}>
+            <a href="/signin" className="nav-link text-white" onClick={logOut}>
               LogOut
             </a>
           </li>
