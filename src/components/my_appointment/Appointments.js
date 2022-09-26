@@ -27,27 +27,27 @@ const Appointments = () => {
       <div className="my-appointment-box py-3">
         {
 
-          data.map((el) => (
-            <div className="my-appointment-card card m-2" key={el.appointmentId}>
-              <div className="p-5 d-flex card-box">
-                <h4 className="p-2 doc-name">
-                  Doctor
-                  {` ${el.doctorName}`}
-                </h4>
-                <h5 className="p-2">
-                  <span className="reserve me-2">Reservation Date:</span>
-                  {' '}
-                  {el.dateReserved}
-                </h5>
-                <h5 className="p-2">
-                  <span className="city me-2">City: </span>
-                  {el.cityName}
-                </h5>
-              </div>
-              <button type="submit" onClick={(e) => deleteAppointment(e, el.appointmentId)} className="delete-appointment">CANCEL</button>
-            </div>
+data.map((el) => (
+  <div className="my-appointment-card card m-2" key={el.appointmentId}>
+    <div className="p-5 d-flex card-box flex-column flex-md-row">
+      <h4 className="p-2 doc-name">
+        Doctor
+        {` ${el.doctorName}`}
+      </h4>
+      <h5 className="p-2">
+        <span className="reserve me-2">Reservation Date:</span>
+        {' '}
+        {el.dateReserved}
+      </h5>
+      <h5 className="p-2">
+        <span className="city me-2">City: </span>
+        {el.cityName}
+      </h5>
+    </div>
+    <button type="submit" onClick={() => deleteAppointment(el.appointmentId)} className="delete-appointment">DELETE</button>
+  </div>
 
-          ))
+))
         }
 
       </div>
