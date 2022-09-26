@@ -13,7 +13,7 @@ import NotFound from './components/NotFound';
 import localStorages from './helpers/localStorage';
 import 'react-notifications/lib/notifications.css';
 import Appointments from './components/my_appointment/Appointments';
-
+const user = localStorage.getItem('user');
 const App = () => {
   const hasAccount = localStorages.getUser();
 
@@ -31,6 +31,7 @@ const App = () => {
             <Route path="/delete_doctor" element={<DeleteDoctor />} />
             <Route path="/doctor_details/:id" element={<DoctorDetails />} />
             <Route path="/*" element={<NotFound />} />
+            <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
           </Routes>
         </section>
       </div>
@@ -39,11 +40,10 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Splashscreen />} />
+        <Route path="/" element={user ? <Doctors /> : <Splashscreen />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
       </Routes>
-
     </div>
 
   );
