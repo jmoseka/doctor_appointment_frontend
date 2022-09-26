@@ -1,18 +1,37 @@
 .doc-container-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.form-container {
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-title h2 {
   font-family: 'poppins', sans-serif;
   font-weight: 900;
+}
+
+.form-appointment {
+  width: 100%;
+  border: 1px solid whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+.doc-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.doc-form-group {
+  font-weight: 500;
+  width: 30rem;
+}
+
+.doc-form-group p {
+  font-size: 1.05rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 #doctor-submit {
@@ -30,22 +49,7 @@
   background: #97bf0e;
 }
 
-.doc-form {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 1rem;
-}
-
-.form-group {
-  width: 40%;
-}
-
 .form-control {
-  width: 100%;
   background-color: white;
 }
 
@@ -55,22 +59,14 @@
 }
 
 textarea {
+  height: 10rem;
   min-height: 10rem;
   max-height: 10rem;
-}
-
-form {
-  border: 1px solid whitesmoke;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
 }
 
 @media (max-width: 800px) {
   .doc-container-form {
     width: 100%;
     justify-content: space-between;
-  }
-
-  .form-group {
-    width: 90%;
   }
 }

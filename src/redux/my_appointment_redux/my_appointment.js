@@ -39,10 +39,10 @@ export const fetchData = () => async (dispatch) => {
   const data = await response.data;
   const arr = [];
   data.forEach((element) => {
-    const { city, date_reserved } = element;
-    const { name, id } = element.doctor;
+    const { city, date_reserved, id } = element;
+    const { name } = element.doctor;
     arr.push({
-      docId: id,
+      appointmentId: id,
       cityName: city,
       dateReserved: date_reserved,
       doctorName: name,
