@@ -44,7 +44,7 @@ data.map((el) => (
         {el.cityName}
       </h5>
     </div>
-    <button type="submit" onClick={() => deleteAppointment(el.appointmentId)} className="delete-appointment">DELETE</button>
+    <button type="submit" onClick={(e) => deleteAppointment(e, el.appointmentId)} className="delete-appointment">DELETE</button>
   </div>
 
 ))

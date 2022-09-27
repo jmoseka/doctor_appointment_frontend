@@ -6,7 +6,9 @@ import { LoginUserAction } from '../../redux/auth/login';
 import './css/sign_in_up.css';
 
 function Signin() {
-  const notify = () => toast('Logged in successfully.');
+  const notify = () => {
+    toast('Logged in successfully.');
+  };
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,6 +21,7 @@ function Signin() {
       password,
     };
     dispatch(LoginUserAction(user));
+    user.login = true;
   };
   return (
     <div className="container-signup d-md-flex">

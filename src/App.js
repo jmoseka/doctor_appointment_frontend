@@ -38,9 +38,9 @@ const App = () => {
   }
   return (
     <div>
-      <Splashscreen />
       <Routes>
-        <Route path="/splashscreen" element={<Splashscreen />} />
+        <Route path="/" element={<Splashscreen />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
       </Routes>

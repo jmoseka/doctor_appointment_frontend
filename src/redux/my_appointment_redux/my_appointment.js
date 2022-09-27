@@ -7,7 +7,7 @@ const GET_DATA = 'doctor_appointment_frontend/my_appointment/getData';
 const CREATE_RESERVE = 'doctor_appointment_frontend/my_appointment/RESERVE';
 const DELETE_APPOINTMENT = 'doctor_appointment_frontend/my_appointment/deleteAppointment';
 
-const { id } = localStorages.getUser().user;
+const { id } = localStorages.getUser().user || '';
 const userID = id;
 
 export const getData = (payload) => ({
