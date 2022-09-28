@@ -15,11 +15,6 @@ const DeleteDoctor = () => {
   const role = hasAccount.user.name;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (role !== 'admin') {
-      navigate('/401');
-    }
-  }, []);
 
   const dispatch = useDispatch();
   const deleteDoctor = (id) => {
