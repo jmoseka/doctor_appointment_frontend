@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData } from '../../redux/my_appointment_redux/my_appointment';
+import { deleteAppointmentAction, fetchData } from '../../redux/my_appointment_redux/my_appointment';
 import './css/appointment.css';
 
 const Appointments = () => {
@@ -12,10 +12,15 @@ const Appointments = () => {
   }, []);
   const data = useSelector((state) => state.my_appointment);
 
+  const deleteAppointment = (e, id) => {
+    dispatch(deleteAppointmentAction(id));
+    e.target.parentNode.remove();
+  };
+
   return (
     <div className="my-appointment-container mt-5 mx-3">
 
-      <div className="px-5 pb-2 text-center appointment-heading">
+      <div className="px-5 pb-2 text-center appointment-heading mt-5">
         <h2>My Appointments</h2>
       </div>
 

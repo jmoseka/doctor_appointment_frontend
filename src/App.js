@@ -57,7 +57,8 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={user ? <Doctors /> : <Splashscreen />} />
+        <Route path="/" element={<Splashscreen />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
       </Routes>
