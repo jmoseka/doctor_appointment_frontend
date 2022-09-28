@@ -6,5 +6,14 @@ import store from '../../../redux/store';
 import Doctors from '../../Doctors';
 
 describe('DoctorList', () => {
-  
+  it('renders correctly', () => {
+    const tree = render(
+      <Provider store={store}>
+        <Router>
+          <Doctors />
+        </Router>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
