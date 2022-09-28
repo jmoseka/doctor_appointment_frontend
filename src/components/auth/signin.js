@@ -12,16 +12,16 @@ function Signin() {
 
   const dispatch = useDispatch();
 
-  const user = {
-    email,
-    password,
-  };
   const handleSubmit = (e) => {
+    const user = {
+      email,
+      password,
+    };
     e.preventDefault();
     dispatch(LoginUserAction(user));
     setTimeout(() => {
       window.location.reload();
-    }, 800);
+    }, 2000);
   };
   return (
     <div className="container-signup d-md-flex">
