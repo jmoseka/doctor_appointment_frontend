@@ -43,6 +43,8 @@ body {
 .navbar ul {
   list-style-type: none;
   margin: 0 auto;
+  list-style-type: none;
+  margin: 0 auto;
 }
 
 .navbar ul li {
@@ -210,10 +212,6 @@ table th {
   background-color: #708e0e !important;
   border: none;
   color: #fff !important;
-}
-
-.navbar ul {
-  padding: 1px;
 }
 
 /* media queries */
