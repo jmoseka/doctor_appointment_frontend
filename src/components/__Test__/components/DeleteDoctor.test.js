@@ -6,6 +6,6 @@ import store from '../../../redux/store';
 import DeleteDoctor from '../../delete_doctor/DeleteDoctor';
 
 describe('Delete listing', () => {
-    
-  });
+    it('renders correctly', () => {
+        
   
