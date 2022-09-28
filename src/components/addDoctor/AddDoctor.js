@@ -14,7 +14,7 @@ const AddDoctor = () => {
     if (role !== 'admin') {
       navigate('/401');
     }
-  }, [])
+  }, []);
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
