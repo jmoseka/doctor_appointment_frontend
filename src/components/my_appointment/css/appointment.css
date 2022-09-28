@@ -10,6 +10,7 @@
 .my-appointment-box {
   border: 4px solid whitesmoke;
   width: 90%;
+  margin: 0 auto;
 }
 
 .card {
@@ -42,4 +43,17 @@
 
 .delete-appointment:hover {
   background: red;
+}
+
+@media (max-width: 800px) {
+  .my-appointment-box {
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  .my-appointment-box h5, .my-appointment-box h4 {
+    font-size: 1rem;
+  }
 }
