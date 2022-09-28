@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  gap: 2rem;
   margin-top: 100px;
 }
 
@@ -21,4 +22,10 @@
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .delete-container {
+    flex-direction: column;
+  }
 }

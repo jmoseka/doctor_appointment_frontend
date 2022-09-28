@@ -1,7 +1,14 @@
 .doc-container-form {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 2rem;
+  width: 90%;
+  margin: 0;
+}
+
+.form-container {
+  width: 90%;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
@@ -9,6 +16,11 @@
 .form-title h2 {
   font-family: 'poppins', sans-serif;
   font-weight: 900;
+}
+
+.add-doc-container {
+  display: flex;
+  justify-content: center;
 }
 
 .form-appointment {
@@ -67,6 +79,6 @@ textarea {
 @media (max-width: 800px) {
   .doc-container-form {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 }

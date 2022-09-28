@@ -30,7 +30,7 @@ const NewAppointment = () => {
   };
 
   return (
-    <div className=" reserveContainer ">
+    <div className="reserveContainer">
       <div>
         <div className="flex">
           <h4 className="reserveFormHeading">Book Appointment</h4>
@@ -48,45 +48,44 @@ const NewAppointment = () => {
         <form action="/#" className="form-list" onSubmit={handleSubmit}>
           <div className="details-form">
             <div className="form-group">
-              <p className="ms-4 mb-1">City</p>
+              <p className="ms-4 mb-1 text-white">City</p>
               <input
                 type="text"
                 name="city"
                 id="city-town"
-                className="form-control rounded-pill"
+                className="form-control"
                 placeholder="Enter your city"
                 required
                 onChange={(e) => setCity(e.target.value)}
               />
             </div>
-            <select
-              name="availableDoctors"
-              id="availableDoctors"
-              value={doctorId}
-              className="form-user-name"
-              onChange={(e) => setDoctorId(e.target.value)}
-            >
-              {doctors.map((doctor) => (
-                <option value={doctor.id} key={doctor.id}>
-                  {doctor.name}
-                </option>
-              ))}
-              {/* <option value="Ranjeet"> Dr.Lion Rouge </option>
-              <option value="Ranjeet"> Dr.Asiati Magana </option>
-              <option value="Ranjeet"> Dr.Jamila Moseka </option>
-              <option value="Ranjeet"> Dr.Eric Mahale </option>
-              <option value="Ranjeet"> Dr.Mandela </option> */}
-            </select>
-            <p className="ms-4 mb-1">Date</p>
-            <input
-              type="date"
-              value={dateReserved}
-              className="form-user-name"
-              onChange={(e) => setDateReserved(e.target.value)}
-            />
-            <br />
+            <div className="form-group">
+              <p className="ms-4 mb-1 text-white">Doctor</p>
+              <select
+                name="availableDoctors"
+                id="availableDoctors"
+                value={doctorId}
+                className="form-control"
+                onChange={(e) => setDoctorId(e.target.value)}
+              >
+                {doctors.map((doctor) => (
+                  <option value={doctor.id} key={doctor.id}>
+                    {doctor.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="form-group">
+              <p className="ms-4 mb-1 text-white">Date</p>
+              <input
+                type="date"
+                value={dateReserved}
+                className="form-control"
+                onChange={(e) => setDateReserved(e.target.value)}
+              />
+            </div>
           </div>
-          <div className="form-book">
+          <div className="form-book mb-3">
             <input
               type="submit"
               value="Book Now"

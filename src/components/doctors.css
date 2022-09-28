@@ -127,3 +127,19 @@
   cursor: pointer;
   display: block;
 }
+
+@media (max-width: 800px) {
+  .doctor-container {
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .single-image {
+    width: 15rem;
+  }
+
+  .detail-name {
+    font-size: 1.2rem !important;
+  }
+}

@@ -22,7 +22,7 @@ body {
 
 /* navbar */
 .navbar {
-  min-width: 250px;
+  width: 200px;
   height: 100vh;
   border-right: 0.4px solid rgba(142, 142, 142, 0.2);
   padding: 0 0.5rem 0 0.5rem;
@@ -37,12 +37,13 @@ body {
 }
 
 .links-container {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .navbar ul {
   list-style-type: none;
   margin: 0 auto;
+  padding: 1px;
 }
 
 .navbar ul li {
@@ -77,15 +78,12 @@ body {
 .copyright {
   position: absolute;
   bottom: 1rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /* end of navbar */
 
 /* main section */
-#main-sec {
-  margin-left: 250px;
-}
 
 /* end of main section */
 
@@ -152,7 +150,7 @@ table th {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  left: 250px;
+  left: 200px;
   bottom: 1rem;
   color: #fff;
   background-color: #afd828;
@@ -180,10 +178,89 @@ table th {
   cursor: pointer;
 }
 
+.main-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .hide {
   display: none;
 }
 
 .show {
   display: block;
+}
+
+.none {
+  margin-left: 0;
+}
+
+.block {
+  margin-left: 200px;
+}
+
+.btn-details {
+  background-color: #97bf0e;
+  border: none;
+  color: #fff;
+}
+
+.btn-details:hover {
+  background-color: #708e0e !important;
+  border: none;
+  color: #fff !important;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+  .navbar {
+    width: 150px;
+    padding: 0 0 0 0;
+  }
+
+  .block {
+    margin-left: 150px;
+  }
+
+  .close-btn-container {
+    left: 150px;
+  }
+
+  .logo {
+    width: 7rem;
+  }
+
+  .navbar ul {
+    padding: 1px;
+  }
+
+  .navbar ul li a {
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    padding: 8px;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .links-container {
+    margin-top: 3rem;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 1rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+
+  .doctor-header {
+    color: var(--black);
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
 }

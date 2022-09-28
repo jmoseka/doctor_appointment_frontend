@@ -15,12 +15,15 @@ function Signin() {
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     const user = {
       email,
       password,
     };
+    e.preventDefault();
     dispatch(LoginUserAction(user));
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
     user.login = true;
   };
   return (
@@ -45,7 +48,7 @@ function Signin() {
         </div>
 
         <div className="form-container">
-          <form className="signup-form" onSubmit={handleSubmit}>
+          <form className="signup-form" onSubmit={handleSubmit} method="POST">
             <div className="form-group">
               <p className="ms-4 mb-1">Email</p>
               <input
@@ -73,9 +76,9 @@ function Signin() {
 
             <div className="signup-buttons mt-5 text-center">
               <button
+                onClick={notify}
                 type="submit"
                 className="style-btn rounded-pill"
-                onClick={notify}
               >
                 LOGIN
               </button>

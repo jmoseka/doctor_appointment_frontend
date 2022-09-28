@@ -35,7 +35,6 @@ function Signup() {
           <p className="p-2">
             The leading online booking website
             for doctors anywhere, anytime. Take care of your body it will take care of you
-
           </p>
         </div>
 

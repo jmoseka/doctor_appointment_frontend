@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { NotificationContainer } from 'react-notifications';
 import AddDoctor from './components/addDoctor/AddDoctor';
@@ -11,18 +12,34 @@ import Navbar from './components/Navbar';
 import NewAppointment from './components/new-appointment/NewAppointment';
 import NotFound from './components/NotFound';
 import localStorages from './helpers/localStorage';
-import 'react-notifications/lib/notifications.css';
 import Appointments from './components/my_appointment/Appointments';
+import 'react-notifications/lib/notifications.css';
 
+const user = localStorage.getItem('user');
 const App = () => {
   const hasAccount = localStorages.getUser();
+
+  const [classValue, setClassValue] = useState('show');
+  const [showNav, setShowNav] = useState('block');
+  const toggleMenu = () => {
+    if (classValue === 'show') {
+      setClassValue('hide');
+      setShowNav('none');
+    } else {
+      setClassValue('show');
+      setShowNav('block');
+    }
+  };
 
   if (hasAccount?.user) {
     return (
       <div>
         <NotificationContainer />
-        <Navbar />
-        <section id="main-sec">
+        <Navbar
+          classValue={classValue}
+          toggleMenu={toggleMenu}
+        />
+        <section className={`main-sec ${showNav}`}>
           <Routes>
             <Route path="/" element={<Doctors />} />
             <Route path="/add_doctor" element={<AddDoctor />} />
@@ -31,6 +48,7 @@ const App = () => {
             <Route path="/delete_doctor" element={<DeleteDoctor />} />
             <Route path="/doctor_details/:id" element={<DoctorDetails />} />
             <Route path="/*" element={<NotFound />} />
+            <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
           </Routes>
         </section>
       </div>
@@ -42,9 +60,8 @@ const App = () => {
         <Route path="/" element={<Splashscreen />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
       </Routes>
-
     </div>
 
   );

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getDoctorsAction } from '../redux/doctorReduce/doctors';
 
 const DoctorDetails = () => {
@@ -39,6 +39,7 @@ const DoctorDetails = () => {
             <td>{bill}</td>
           </tr>
         </table>
+        <Link to="/new_appointment" className="btn-details btn mt-4 text-center">Book Appointment</Link>
       </div>
     </div>
   );
