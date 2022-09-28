@@ -64,7 +64,7 @@ export const reserveAction = (payload) => async (dispatch) => {
     })
     .catch((error) => {
       dispatch(createReserve(error.response.data));
-      NotificationManager.error('Error while creating new book!', 'Error!');
+      NotificationManager.error('Error while creating the Reservation!', 'Error!');
     });
 };
 
