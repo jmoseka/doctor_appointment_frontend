@@ -6,12 +6,15 @@ import store from '../../../redux/store';
 import DeleteDoctor from '../../delete_doctor/DeleteDoctor';
 
 describe('Delete listing', () => {
-    it('renders correctly', () => {
-      window.localStorage.setItem('user', 1);
-      const tree = render(
-        
-      );
-      expect(tree).toMatchSnapshot();
-    });
+  it('renders correctly', () => {
+    window.localStorage.setItem('user', 1);
+    const tree = render(
+      <Provider store={store}>
+        <Router>
+          <DeleteDoctor />
+        </Router>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot();
   });
-  
+});
