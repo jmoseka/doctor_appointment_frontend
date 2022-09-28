@@ -12,10 +12,10 @@ const Appointments = () => {
   }, []);
   const data = useSelector((state) => state.my_appointment);
 
-  const deleteAppointment = (e, id) => {
-    dispatch(deleteAppointmentAction(id));
-    e.target.parentNode.remove();
-  };
+  // const deleteAppointment = (e, id) => {
+  //   dispatch(deleteAppointmentAction(id));
+  //   e.target.parentNode.remove();
+  // };
 
   return (
     <div className="my-appointment-container mt-5 mx-3">
