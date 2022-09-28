@@ -45,7 +45,7 @@ const Doctors = () => {
           ? (
             <div className="doctors">
               <h1 className="doctor-header">AVAILABLE DOCTORS</h1>
-              <h2 className="not-found-notice mt-5">No doctors available</h2>
+              
             </div>
           )
 
