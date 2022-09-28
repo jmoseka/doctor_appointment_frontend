@@ -3,16 +3,22 @@
   flex-direction: column;
   padding-top: 2rem;
   width: 90%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .form-container {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .form-title h2 {
   font-family: 'poppins', sans-serif;
   font-weight: 900;
+}
+
+.add-doc-container {
+  display: flex;
+  justify-content: center;
 }
 
 #doctor-submit {
@@ -67,7 +73,7 @@ form {
 @media (max-width: 800px) {
   .doc-container-form {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .form-group {
