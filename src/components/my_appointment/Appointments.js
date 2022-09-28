@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteAppointmentAction, fetchData } from '../../redux/my_appointment_redux/my_appointment';
+import { fetchData } from '../../redux/my_appointment_redux/my_appointment';
 import './css/appointment.css';
 
 const Appointments = () => {
@@ -12,15 +12,10 @@ const Appointments = () => {
   }, []);
   const data = useSelector((state) => state.my_appointment);
 
-  // const deleteAppointment = (e, id) => {
-  //   dispatch(deleteAppointmentAction(id));
-  //   e.target.parentNode.remove();
-  // };
-
   return (
-    <div className="my-appointment-container mt-5 mx-3">
+    <div className="my-appointment-container">
 
-      <div className="px-5 pb-2 text-center appointment-heading mt-5">
+      <div className="px-5 pb-2 text-center appointment-heading">
         <h2>My Appointments</h2>
       </div>
 
@@ -44,7 +39,7 @@ const Appointments = () => {
                   {el.cityName}
                 </h5>
               </div>
-              <button type="submit" className="delete-appointment text-white">DELETE</button>
+              <button type="submit" className="delete-appointment">DELETE</button>
             </div>
 
           ))
