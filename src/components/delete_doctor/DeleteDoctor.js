@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import localStorages from '../../helpers/localStorage';
 import {
   deleteDoctorAction,
   getDoctorsAction,
@@ -9,6 +11,15 @@ import './delete_doctor.css';
 const DeleteDoctor = () => {
   const doctors = useSelector((state) => state.doctor);
   const [successNotice, setSuccessNotice] = useState(false);
+  const hasAccount = localStorages.getUser();
+  const { name } = hasAccount.user;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (name !== 'admin') {
+      navigate('/401');
+    }
+  }, []);
 
   const dispatch = useDispatch();
   const deleteDoctor = (id) => {

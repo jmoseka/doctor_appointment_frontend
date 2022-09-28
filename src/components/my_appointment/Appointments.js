@@ -24,33 +24,43 @@ const Appointments = () => {
         <h2>My Appointments</h2>
       </div>
 
-      <div className="my-appointment-box py-3">
-        {
+      {
+        data.length === 0
+          ? (
+            <div className="text center m-5">
+              <h2>No appointment booked</h2>
+            </div>
+          )
+          : (
+            <div className="my-appointment-box py-3">
+              {
 
-data.map((el) => (
-  <div className="my-appointment-card card m-2" key={el.appointmentId}>
-    <div className="p-5 d-flex card-box flex-column flex-md-row">
-      <h4 className="p-2 doc-name">
-        Doctor
-        {` ${el.doctorName}`}
-      </h4>
-      <h5 className="p-2">
-        <span className="reserve me-2">Reservation Date:</span>
-        {' '}
-        {el.dateReserved}
-      </h5>
-      <h5 className="p-2">
-        <span className="city me-2">City: </span>
-        {el.cityName}
-      </h5>
-    </div>
-    <button type="submit" onClick={(e) => deleteAppointment(e, el.appointmentId)} className="delete-appointment">DELETE</button>
-  </div>
-
-))
-        }
-
+  data.map((el) => (
+    <div className="my-appointment-card card m-2" key={el.appointmentId}>
+      <div className="p-5 d-flex card-box flex-column flex-lg-row">
+        <h4 className="p-2 doc-name">
+          Doctor
+          {` ${el.doctorName}`}
+        </h4>
+        <h5 className="p-2">
+          <span className="reserve me-2">Reservation Date:</span>
+          {' '}
+          {el.dateReserved}
+        </h5>
+        <h5 className="p-2">
+          <span className="city me-2">City: </span>
+          {el.cityName}
+        </h5>
       </div>
+      <button type="submit" onClick={(e) => deleteAppointment(e, el.appointmentId)} className="delete-appointment">DELETE</button>
+    </div>
+
+  ))
+          }
+
+            </div>
+          )
+      }
 
     </div>
   );

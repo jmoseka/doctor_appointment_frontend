@@ -5,6 +5,7 @@
 
 .my-appointment-container {
   font-family: 'Lato', sans-serif;
+  min-width: 730px;
 }
 
 .my-appointment-box {

@@ -21,7 +21,6 @@ function Signin() {
       password,
     };
     dispatch(LoginUserAction(user));
-    user.login = true;
   };
   return (
     <div className="container-signup d-md-flex">

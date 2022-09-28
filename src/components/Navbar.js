@@ -3,8 +3,12 @@ import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { GiTriangleTarget } from 'react-icons/gi';
 import { logout } from '../redux/auth/login';
+import localStorages from '../helpers/localStorage';
 
 const Navbar = () => {
+  const hasAccount = localStorages.getUser();
+  const { name } = hasAccount.user;
+
   const dispatch = useDispatch();
   const logOut = useCallback(() => {
     dispatch(logout());
@@ -44,14 +48,6 @@ const Navbar = () => {
           <li>
             <NavLink
               className={(navData) => (navData.isActive ? 'active link' : 'link')}
-              to="/add_doctor"
-            >
-              Add Doctor
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={(navData) => (navData.isActive ? 'active link' : 'link')}
               to="/appointments"
             >
               Appointments
@@ -65,14 +61,32 @@ const Navbar = () => {
               New Appointment
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className={(navData) => (navData.isActive ? 'active link' : 'link')}
-              to="/delete_doctor"
-            >
-              Delete a Doctor
-            </NavLink>
-          </li>
+
+          {
+            name === 'admin'
+              ? (
+                <>
+                  <li>
+                    <NavLink
+                      className={(navData) => (navData.isActive ? 'active link' : 'link')}
+                      to="/add_doctor"
+                    >
+                      Add Doctor
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={(navData) => (navData.isActive ? 'active link' : 'link')}
+                      to="/delete_doctor"
+                    >
+                      Delete a Doctor
+                    </NavLink>
+                  </li>
+                </>
+              )
+              : null
+          }
+
           <li className="nav-logout">
             <i className="fa-solid fa-right-from-bracket" />
             <a href="/signin" className="nav-link" onClick={logOut}>

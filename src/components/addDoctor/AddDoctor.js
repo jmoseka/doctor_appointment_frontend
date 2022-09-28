@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './add_doctor.css';
 import { useDispatch } from 'react-redux';
 import { createDoctorAction } from '../../redux/doctorReduce/doctors';
+import localStorages from '../../helpers/localStorage';
 
 const AddDoctor = () => {
-  const [name, setName] = useState('');
+  const hasAccount = localStorages.getUser();
+  const { name } = hasAccount.user;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (name !== 'admin') {
+      navigate('/401');
+    }
+  }, []);
+
+  const [userName, setName] = useState('');
   const [email, setEmail] = useState('');
   const [speciality, setSpeciality] = useState('');
   const [location, setLocation] = useState('');
@@ -24,7 +36,7 @@ const AddDoctor = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const doctor = {
-      name,
+      userName,
       email,
       speciality,
       location,
