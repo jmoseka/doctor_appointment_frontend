@@ -1,16 +1,17 @@
 .appointment-heading h2 {
   font-family: 'poppins', sans-serif;
+  letter-spacing: 2px;
   font-weight: 900;
 }
 
 .my-appointment-container {
   font-family: 'Lato', sans-serif;
+  min-width: 730px;
 }
 
 .my-appointment-box {
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(0, 0, 0, 0.06) 0 1px 2px 0;
   width: 90%;
-  margin: 0 auto;
 }
 
 .card {
@@ -49,18 +50,4 @@
 
 .delete-appointment:hover {
   background: red;
-}
-
-@media (max-width: 800px) {
-  .my-appointment-box {
-    border: none;
-    width: 90%;
-    margin: 0 auto;
-    font-size: 0.8rem;
-  }
-
-  .my-appointment-box h5,
-  .my-appointment-box h4 {
-    font-size: 1rem;
-  }
 }

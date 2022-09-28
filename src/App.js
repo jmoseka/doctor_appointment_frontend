@@ -14,6 +14,7 @@ import NotFound from './components/NotFound';
 import localStorages from './helpers/localStorage';
 import Appointments from './components/my_appointment/Appointments';
 import 'react-notifications/lib/notifications.css';
+import NoAuth from './components/auth/no_auth';
 
 const user = localStorage.getItem('user');
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
             <Route path="/delete_doctor" element={<DeleteDoctor />} />
             <Route path="/doctor_details/:id" element={<DoctorDetails />} />
             <Route path="/*" element={<NotFound />} />
+            <Route path="/401" element={<NoAuth />} />
             <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
           </Routes>
         </section>

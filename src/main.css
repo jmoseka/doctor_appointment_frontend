@@ -213,6 +213,10 @@ table th {
   color: #fff !important;
 }
 
+.not-found-notice {
+  color: darkgray;
+}
+
 /* media queries */
 @media (max-width: 800px) {
   .navbar {

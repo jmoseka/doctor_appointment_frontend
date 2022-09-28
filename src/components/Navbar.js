@@ -4,9 +4,13 @@ import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { GiTriangleTarget } from 'react-icons/gi';
 import { logout } from '../redux/auth/login';
+import localStorages from '../helpers/localStorage';
 
 const Navbar = ({ classValue, toggleMenu }) => {
   const dispatch = useDispatch();
+  const hasAccount = localStorages.getUser();
+  const { name } = hasAccount.user;
+
   const logOut = useCallback(() => {
     dispatch(logout());
   }, [dispatch]);
@@ -36,14 +40,6 @@ const Navbar = ({ classValue, toggleMenu }) => {
           <li>
             <NavLink
               className={(navData) => (navData.isActive ? 'active link' : 'link')}
-              to="/add_doctor"
-            >
-              Add Doctor
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={(navData) => (navData.isActive ? 'active link' : 'link')}
               to="/appointments"
             >
               Appointments
@@ -57,14 +53,31 @@ const Navbar = ({ classValue, toggleMenu }) => {
               New Appointment
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className={(navData) => (navData.isActive ? 'active link' : 'link')}
-              to="/delete_doctor"
-            >
-              Delete a Doctor
-            </NavLink>
-          </li>
+          {
+            name === 'admin'
+              ? (
+                <div>
+                  <li>
+                    <NavLink
+                      className={(navData) => (navData.isActive ? 'active link' : 'link')}
+                      to="/add_doctor"
+                    >
+                      Add Doctor
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className={(navData) => (navData.isActive ? 'active link' : 'link')}
+                      to="/delete_doctor"
+                    >
+                      Delete a Doctor
+                    </NavLink>
+                  </li>
+                </div>
+              )
+              : null
+          }
+
           <li className="nav-logout">
             <i className="fa-solid fa-right-from-bracket" />
             <a href="/signin" className="nav-link text-white" onClick={logOut}>

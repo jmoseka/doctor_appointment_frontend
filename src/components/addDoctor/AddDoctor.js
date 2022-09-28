@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './add_doctor.css';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { createDoctorAction } from '../../redux/doctorReduce/doctors';
+import localStorages from '../../helpers/localStorage';
 
 const AddDoctor = () => {
+  const hasAccount = localStorages.getUser();
+  const role = hasAccount.user.name;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (role !== 'admin') {
+      navigate('/401');
+    }
+  }, []);
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [speciality, setSpeciality] = useState('');
