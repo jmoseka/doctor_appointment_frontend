@@ -7,5 +7,6 @@ import DeleteDoctor from '../../delete_doctor/DeleteDoctor';
 
 describe('Delete listing', () => {
     it('renders correctly', () => {
+        window.localStorage.setItem('user', 1);
         
   
