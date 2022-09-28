@@ -10,6 +10,8 @@ const NewAppointment = () => {
   const doctors = useSelector((state) => state.doctor);
   const userId = JSON.parse(localStorage.getItem('user'));
 
+  const cityTown = document.getElementById('city-town');
+
   const [doctorId, setDoctorId] = useState('');
   const [city, setCity] = useState('');
   const [dateReserved, setDateReserved] = useState('');
@@ -26,6 +28,7 @@ const NewAppointment = () => {
       date_reserved: dateReserved,
       doctor_id: doctorId,
     };
+    cityTown.value = '';
     dispatch(reserveAction(data));
   };
 
