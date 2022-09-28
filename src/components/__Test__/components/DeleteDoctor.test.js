@@ -7,6 +7,11 @@ import DeleteDoctor from '../../delete_doctor/DeleteDoctor';
 
 describe('Delete listing', () => {
     it('renders correctly', () => {
-        window.localStorage.setItem('user', 1);
+      window.localStorage.setItem('user', 1);
+      const tree = render(
         
+      );
+      expect(tree).toMatchSnapshot();
+    });
+  });
   
