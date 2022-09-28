@@ -53,7 +53,8 @@
     font-size: 0.8rem;
   }
 
-  .my-appointment-box h5, .my-appointment-box h4 {
+  .my-appointment-box h5,
+  .my-appointment-box h4 {
     font-size: 1rem;
   }
 }
