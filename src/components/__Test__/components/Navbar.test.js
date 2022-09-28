@@ -6,5 +6,14 @@ import store from '../../../redux/store';
 import Navbar from '../../Navbar';
 
 describe('Navbar', () => {
-  
+  it('renders correctly', () => {
+    const tree = render(
+      <Provider store={store}>
+        <Router>
+          <Navbar />
+        </Router>
+      </Provider>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

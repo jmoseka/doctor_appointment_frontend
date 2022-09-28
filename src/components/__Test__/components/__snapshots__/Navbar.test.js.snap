@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="navbar undefined"
+      >
+        <div
+          class="logo-container"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="logo"
+              class="logo"
+              src="./images/logo.png"
+            />
+          </a>
+        </div>
+        <div
+          class="links-container"
+        >
+          <ul>
+            <li>
+              <a
+                aria-current="page"
+                class="active link"
+                href="/"
+              >
+                Doctors
+              </a>
+            </li>
+            <li>
+              <a
+                class="link"
+                href="/appointments"
+              >
+                Appointments
+              </a>
+            </li>
+            <li>
+              <a
+                class="link"
+                href="/new_appointment"
+              >
+                New Appointment
+              </a>
+            </li>
+            <li
+              class="nav-logout"
+            >
+              <i
+                class="fa-solid fa-right-from-bracket"
+              />
+              <a
+                class="nav-link text-white"
+                href="/signin"
+              >
+                LogOut
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p
+          class="copyright"
+        >
+          © Microverse 2022
+        </p>
+        <div
+          class="close-btn-container"
+        >
+          <svg
+            class="close-arrow"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M247 65.16L32.34 440.8l61.79-35.7L247 137.6zm18 .38V137l158.3 271.3 62.7 36.1C412.2 318.2 338.6 191.8 265 65.54zM415.4 424.5l-321.3 1.4-62.72 36.2 445.82-1.9z"
+            />
+          </svg>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="navbar undefined"
+    >
+      <div
+        class="logo-container"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo"
+            class="logo"
+            src="./images/logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="links-container"
+      >
+        <ul>
+          <li>
+            <a
+              aria-current="page"
+              class="active link"
+              href="/"
+            >
+              Doctors
+            </a>
+          </li>
+          <li>
+            <a
+              class="link"
+              href="/appointments"
+            >
+              Appointments
+            </a>
+          </li>
+          <li>
+            <a
+              class="link"
+              href="/new_appointment"
+            >
+              New Appointment
+            </a>
+          </li>
+          <li
+            class="nav-logout"
+          >
+            <i
+              class="fa-solid fa-right-from-bracket"
+            />
+            <a
+              class="nav-link text-white"
+              href="/signin"
+            >
+              LogOut
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p
+        class="copyright"
+      >
+        © Microverse 2022
+      </p>
+      <div
+        class="close-btn-container"
+      >
+        <svg
+          class="close-arrow"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M247 65.16L32.34 440.8l61.79-35.7L247 137.6zm18 .38V137l158.3 271.3 62.7 36.1C412.2 318.2 338.6 191.8 265 65.54zM415.4 424.5l-321.3 1.4-62.72 36.2 445.82-1.9z"
+          />
+        </svg>
+      </div>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
