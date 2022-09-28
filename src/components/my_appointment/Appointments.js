@@ -13,7 +13,7 @@ const Appointments = () => {
   const data = useSelector((state) => state.my_appointment);
 
   return (
-    <div className="my-appointment-container">
+    <div className="my-appointment-container mt-5 mx-3">
 
       <div className="px-5 pb-2 text-center appointment-heading">
         <h2>My Appointments</h2>
@@ -39,7 +39,7 @@ const Appointments = () => {
                   {el.cityName}
                 </h5>
               </div>
-              <button type="submit" className="delete-appointment">DELETE</button>
+              <button type="submit" className="delete-appointment text-white">DELETE</button>
             </div>
 
           ))
