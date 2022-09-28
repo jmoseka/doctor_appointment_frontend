@@ -43,8 +43,7 @@ body {
 .navbar ul {
   list-style-type: none;
   margin: 0 auto;
-  list-style-type: none;
-  margin: 0 auto;
+  padding: 1px;
 }
 
 .navbar ul li {
