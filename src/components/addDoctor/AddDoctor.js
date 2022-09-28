@@ -43,13 +43,13 @@ const AddDoctor = () => {
   };
 
   return (
-    <div className="add-doc-container d-flex justify-content-center">
+    <div className="add-doc-container">
       <div className="doc-container-form">
         <div className="form-title text-center pb-4">
           <h2>Add doctor</h2>
         </div>
 
-        <div className="form-container d-flex justify-content-center">
+        <div className="form-container">
           <form className="pb-5" onSubmit={handleSubmit}>
             <div className="doc-form py-5">
               <div className="form-group">
@@ -139,30 +139,6 @@ const AddDoctor = () => {
                   onChange={(e) => setBill(e.target.value)}
                 />
               </div>
-
-              {/* <div className="form-group ms-4 reserve-radio">
-                <p className="text-start mb-1">Are you reserved? </p>
-                <p className="ms-5 mb-1">
-                  <input
-                    type="radio"
-                    name="reserve-yes"
-                    className="rounded-pill input-radio"
-                    checked
-                    required
-                  />
-                  Yes
-                </p>
-                <p className="ms-5 mb-1">
-                  <input
-                    type="radio"
-                    name="reserve-no"
-                    className="rounded-pill input-radio"
-                    required
-                  />
-                  No
-                </p>
-              </div> */}
-
               <div className="form-group">
                 <p htmlFor="description" className="ms-3 mb-1">
                   Description
