@@ -1,23 +1,15 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { GiTriangleTarget } from 'react-icons/gi';
 import { logout } from '../redux/auth/login';
 
-const Navbar = () => {
+const Navbar = ({ classValue, toggleMenu }) => {
   const dispatch = useDispatch();
   const logOut = useCallback(() => {
     dispatch(logout());
   }, [dispatch]);
-
-  const [classValue, setClassValue] = useState('hide');
-  const toggleMenu = () => {
-    if (classValue === 'show') {
-      setClassValue('hide');
-    } else {
-      setClassValue('show');
-    }
-  };
 
   if (classValue === 'hide') {
     return (
@@ -90,3 +82,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+  classValue: PropTypes.string.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
+};
