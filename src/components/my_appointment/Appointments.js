@@ -27,7 +27,7 @@ const Appointments = () => {
       {
         data.length === 0
           ? (
-            <h2 className="not-found-notice mt-5">No appointment booked</h2>
+            <h2 className="not-found-notice mt-5 text-center">No appointment booked</h2>
           )
           : (
             <div className="my-appointment-box py-3">
