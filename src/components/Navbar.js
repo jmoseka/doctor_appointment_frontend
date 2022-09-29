@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { GiTriangleTarget } from 'react-icons/gi';
 import { logout } from '../redux/auth/login';
 import localStorages from '../helpers/localStorage';
@@ -10,9 +10,11 @@ const Navbar = ({ classValue, toggleMenu }) => {
   const dispatch = useDispatch();
   const hasAccount = localStorages.getUser();
   const name = hasAccount.user === undefined ? '' : hasAccount.user.name;
+  const navigate = useNavigate();
 
   const logOut = useCallback(() => {
     dispatch(logout());
+    navigate('/');
   }, [dispatch]);
 
   if (classValue === 'hide') {
