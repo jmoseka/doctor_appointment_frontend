@@ -21,10 +21,10 @@ function Signin() {
     };
     e.preventDefault();
     dispatch(LoginUserAction(user));
-    // setTimeout(() => {
-    //   window.location.reload();
-    // }, 2000);
-    // user.login = true;
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
+    user.login = true;
   };
   return (
     <div className="container-signup d-md-flex">
