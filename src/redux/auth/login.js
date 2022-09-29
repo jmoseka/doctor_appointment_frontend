@@ -5,7 +5,6 @@ const LOGIN_USER = 'DOCTOR_APPOINTMENT/LOGIN_USER';
 const LOGIN_USER_SUCCESS = 'DOCTOR_APPOINTMENT/LOGIN_USER_SUCCESS';
 const LOGIN_USER_FAILURE = 'DOCTOR_APPOINTMENT/LOGIN_USER_FAILURE';
 export const LOGOUT = 'LOGOUT';
-
 const initialUser = localStorage.getItem('user')
   ? JSON.parse(localStorage.getItem('user'))
   : null;
