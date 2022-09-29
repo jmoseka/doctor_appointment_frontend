@@ -35,7 +35,7 @@ export const deleteAppointmentAction = (payload) => async (dispatch) => {
 
 export const fetchData = () => async (dispatch) => {
   // eslint-disable-next-line no-template-curly-in-string
-  const url = '/api/v1/users/`${userID}/reservations/';
+  const url = `/api/v1/users/${userID}/reservations/`;
   const response = await axios.get(url);
   const data = await response.data;
   const arr = [];

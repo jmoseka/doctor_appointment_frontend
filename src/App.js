@@ -62,6 +62,7 @@ const App = () => {
         <Route path="/" element={<Splashscreen />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/*" element={<NotFound />} />
         <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
       </Routes>
     </div>
