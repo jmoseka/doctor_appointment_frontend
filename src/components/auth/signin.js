@@ -24,7 +24,7 @@ function Signin() {
     dispatch(LoginUserAction(user));
     setTimeout(() => {
       window.location.reload();
-    }, 2000);
+    }, 800);
     user.login = true;
     navigate('/');
   };
