@@ -25,7 +25,7 @@ const DeleteDoctor = () => {
   const deleteDoctor = (id) => {
     dispatch(deleteDoctorAction(id));
     setSuccessNotice(true);
-    window.location.reload();
+    navigate('/');
   };
 
   useEffect(() => {
