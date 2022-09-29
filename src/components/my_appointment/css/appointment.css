@@ -1,0 +1,75 @@
+.appointment-heading h2 {
+  font-family: 'poppins', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.my-appointment-container {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+}
+
+.my-appointment-box {
+  width: 90%;
+}
+
+.columns-appointment {
+  list-style: none;
+  flex: 33.33%;
+  padding: 0;
+  margin: 0;
+}
+
+.columns-appointment li {
+  padding: 0.8rem;
+}
+
+.lbl-appoint {
+  border-bottom: 2px solid gainsboro;
+  font-weight: bold;
+}
+
+.middle-list {
+  border-right: 1px solid gainsboro;
+  border-left: 1px solid gainsboro;
+}
+
+.card {
+  background: white;
+  color: black;
+}
+
+.card-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.doc-name {
+  font-weight: bold;
+}
+
+.my-appointment-card p {
+  color: white;
+}
+
+/** card style */
+
+.reserve,
+.city {
+  color: rgb(168, 166, 166);
+  font-weight: 600;
+}
+
+.delete-appointment {
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background: #617c00;
+  color: white;
+}
+
+.delete-appointment:hover {
+  background: #dddddc;
+  color: #97bf0e;
+  font-weight: bold;
+}

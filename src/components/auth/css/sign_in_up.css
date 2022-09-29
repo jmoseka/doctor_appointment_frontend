@@ -1,0 +1,118 @@
+.container-signup {
+  width: 100%;
+  height: 100vh;
+  min-width: 300px;
+}
+
+#login-on-signup,
+#signup-on-login {
+  text-decoration: none;
+  font-weight: bold;
+  color: #617c00;
+  cursor: pointer;
+}
+
+#login-on-signup:hover {
+  color: #9c8000;
+}
+
+.line-hor {
+  width: 100%;
+}
+
+.line {
+  width: 50px;
+  border: 1px solid #97bf0e;
+}
+
+.logo-title p {
+  color: black;
+}
+
+.logo-content {
+  font-size: 1.1rem;
+}
+
+.form-title p {
+  color: black;
+}
+
+.form-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.form-container {
+  width: 80%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px;
+}
+
+.form-group p {
+  color: black;
+}
+
+.form-control {
+  /* border-radius: 30px; */
+  padding: 0.8rem;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+}
+
+.style-btn {
+  width: 80%;
+  padding: 0.8rem 4rem;
+  border-style: solid;
+  border: none;
+  background: #617c00;
+  color: white;
+}
+
+.style-btn:hover {
+  background: #97bf0e;
+}
+
+.hidden {
+  display: none;
+}
+
+.notice-account p {
+  color: black;
+}
+
+.signup-buttons {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .hidden {
+    display: block;
+  }
+
+  .line {
+    border: 1px solid white;
+  }
+
+  .logo-title p {
+    color: white;
+  }
+
+  .section-logo {
+    background-color: #97bf0e;
+    width: 35%;
+    color: white;
+  }
+
+  .section-form {
+    width: 50%;
+  }
+}
