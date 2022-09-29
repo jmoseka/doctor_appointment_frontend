@@ -9,7 +9,7 @@ import localStorages from '../helpers/localStorage';
 const Navbar = ({ classValue, toggleMenu }) => {
   const dispatch = useDispatch();
   const hasAccount = localStorages.getUser();
-  const { name } = hasAccount.user;
+  const name = hasAccount.user === undefined ? '' : hasAccount.user.name;
 
   const logOut = useCallback(() => {
     dispatch(logout());

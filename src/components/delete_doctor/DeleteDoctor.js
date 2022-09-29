@@ -11,9 +11,9 @@ import './delete_doctor.css';
 const DeleteDoctor = () => {
   const doctors = useSelector((state) => state.doctor);
   const [successNotice, setSuccessNotice] = useState(false);
-  const hasAccount = localStorages.getUser();
-  const role = hasAccount.user.name;
   const navigate = useNavigate();
+  const hasAccount = localStorages.getUser();
+  const role = hasAccount.user === undefined ? '' : hasAccount.user.name;
 
   useEffect(() => {
     if (role !== 'admin') {
