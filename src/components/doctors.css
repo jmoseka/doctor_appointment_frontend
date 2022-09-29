@@ -42,6 +42,7 @@
 .social-net img {
   margin-right: 0.8rem;
   width: 2rem;
+  color: rgb(156 163 175/var(--tw-text-opacity));
 }
 
 .doctor-data h4 {
@@ -54,7 +55,11 @@
 .doctor-data p {
   text-align: center;
   margin: 0.7rem 0;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175/var(--tw-text-opacity));
+  font-weight: 600;
 }
+
 
 .single-image {
   width: 22rem;
@@ -66,6 +71,13 @@
   justify-content: space-between;
   display: flex;
   height: 100%;
+}
+
+
+.doctor-header-para{
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+  color: rgb(107 114 128/var(--tw-text-opacity)) !important;
 }
 
 .details {
