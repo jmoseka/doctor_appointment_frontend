@@ -22,14 +22,16 @@ const NewAppointment = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      user_id: userId.user.id,
-      city,
-      date_reserved: dateReserved,
-      doctor_id: doctorId,
-    };
-    cityTown.value = '';
-    dispatch(reserveAction(data));
+    if (doctorId !== '' && dateReserved !== '') {
+      const data = {
+        user_id: userId.user.id,
+        city,
+        date_reserved: dateReserved,
+        doctor_id: doctorId,
+      };
+      cityTown.value = '';
+      dispatch(reserveAction(data));
+    }
   };
 
   return (

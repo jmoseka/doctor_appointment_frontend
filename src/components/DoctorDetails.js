@@ -6,7 +6,7 @@ import { getDoctorsAction } from '../redux/doctorReduce/doctors';
 const DoctorDetails = () => {
   const doctors = useSelector((state) => state.doctor);
   const dispatch = useDispatch();
-  // const [doctors, setDoctors] = useState([]);
+
   useEffect(() => {
     dispatch(getDoctorsAction());
   }, [dispatch]);
@@ -14,7 +14,7 @@ const DoctorDetails = () => {
   const params = useParams();
   const doctor = doctors.find((doctor) => doctor.id === Number(params.id));
   const {
-    image, name, speciality, email, description, bill,
+    name, speciality, email, image, description, bill,
   } = doctor;
 
   return (

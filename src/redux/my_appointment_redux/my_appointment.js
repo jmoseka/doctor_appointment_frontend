@@ -27,14 +27,15 @@ export const deleteAppointment = (id) => ({
 
 export const deleteAppointmentAction = (payload) => async (dispatch) => {
   axios
-    .delete(`http://127.0.0.1:3000/api/v1/users/${userID}/reservations/${payload}`)
+    .delete(`/api/v1/users/${userID}/reservations/${payload}`)
     .then((res) => {
       dispatch(deleteAppointment(res.data));
     });
 };
 
 export const fetchData = () => async (dispatch) => {
-  const url = '/api/v1/users/3/reservations';
+  // eslint-disable-next-line no-template-curly-in-string
+  const url = '/api/v1/users/`${userID}/reservations/';
   const response = await axios.get(url);
   const data = await response.data;
   const arr = [];
@@ -64,7 +65,7 @@ export const reserveAction = (payload) => async (dispatch) => {
     })
     .catch((error) => {
       dispatch(createReserve(error.response.data));
-      NotificationManager.error('Error while creating new book!', 'Error!');
+      NotificationManager.error('Error while creating the Reservation!', 'Error!');
     });
 };
 
