@@ -50,7 +50,6 @@ const App = () => {
             <Route path="/doctor_details/:id" element={<DoctorDetails />} />
             <Route path="/*" element={<NotFound />} />
             <Route path="/401" element={<NoAuth />} />
-            <Route path="/signin" element={user ? <Doctors /> : <Signin />} />
           </Routes>
         </section>
       </div>
