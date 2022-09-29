@@ -55,11 +55,12 @@
 .doctor-data p {
   text-align: center;
   margin: 0.7rem 0;
+
   --tw-text-opacity: 1;
+
   color: rgb(156 163 175/var(--tw-text-opacity));
   font-weight: 600;
 }
-
 
 .single-image {
   width: 22rem;
@@ -73,8 +74,7 @@
   height: 100%;
 }
 
-
-.doctor-header-para{
+.doctor-header-para {
   font-size: 1.125rem !important;
   line-height: 1.75rem !important;
   color: rgb(107 114 128/var(--tw-text-opacity)) !important;
