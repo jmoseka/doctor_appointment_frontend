@@ -41,7 +41,7 @@
 
 ## Live version
 
-[Doctor-Book-Appoinments](https://monumental-pothos-efc9ce.netlify.app/)
+[Doctor-Book-Appoinments](https://doctor-appointment-frontend.netlify.app/)
 
 ## Getting Started
 
