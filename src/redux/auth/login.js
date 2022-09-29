@@ -38,7 +38,10 @@ const logout = () => {
 export const LoginUserAction = (payload) => async (dispatch) => {
   dispatch(LoginUser());
   axios
-    .post('http://localhost:3000/login', payload)
+    .post(
+      'https://hidden-citadel-49495.herokuapp.com/login',
+      payload,
+    )
     .then((res) => {
       dispatch(LoginUserSuccess(res.data));
       NotificationManager.success(
@@ -49,7 +52,10 @@ export const LoginUserAction = (payload) => async (dispatch) => {
     })
     .catch((error) => {
       dispatch(LoginUserFailure(error.response.data));
-      NotificationManager.error('Error while Login in to the website!', 'Error!');
+      NotificationManager.error(
+        'Error while Login in to the website!',
+        'Error!',
+      );
     });
 };
 

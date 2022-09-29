@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signin renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container-signup d-md-flex"
+      >
+        <section
+          class="section-logo text-center"
+        >
+          <div
+            class="logo-title mt-5 mt-md-5 pt-md-5"
+          >
+            <p
+              class="h3"
+            >
+              DOCTORS APPOINTMENT
+            </p>
+            <div
+              class="line-hor d-flex justify-content-center"
+            >
+              <span
+                class="line "
+              />
+            </div>
+          </div>
+          <div
+            class="logo-text hidden mt-5"
+          >
+            <p
+              class="p-2 logo-content"
+            >
+              The leading online booking website for doctors anywhere, anytime. Take care of your body it will take care of you
+            </p>
+          </div>
+        </section>
+        <section
+          class="section-form d-flex flex-column align-items-center mt-4 mt-md-5 pt-md-5"
+        >
+          <div
+            class="form-title"
+          >
+            <p
+              class="h3"
+            >
+              Log in to your account
+            </p>
+          </div>
+          <div
+            class="form-container"
+          >
+            <form
+              class="signup-form"
+              method="POST"
+            >
+              <div
+                class="form-group"
+              >
+                <p
+                  class="ms-4 mb-1"
+                >
+                  Email
+                </p>
+                <input
+                  class="form-control rounded-pill"
+                  id="signup-email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div
+                class="form-group"
+              >
+                <p
+                  class="ms-4 mb-1"
+                >
+                  Password
+                </p>
+                <input
+                  class="form-control rounded-pill"
+                  id="signup-password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required=""
+                  type="password"
+                />
+              </div>
+              <div
+                class="signup-buttons mt-5 text-center"
+              >
+                <button
+                  class="style-btn rounded-pill"
+                  type="submit"
+                >
+                  LOGIN
+                </button>
+              </div>
+            </form>
+            <div
+              class="notice-account mt-4"
+            >
+              <p>
+                Dont have an account?
+                 
+                <span
+                  class="login-link"
+                >
+                  <a
+                    href="/signup"
+                    id="login-on-signup"
+                  >
+                    Sign up
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container-signup d-md-flex"
+    >
+      <section
+        class="section-logo text-center"
+      >
+        <div
+          class="logo-title mt-5 mt-md-5 pt-md-5"
+        >
+          <p
+            class="h3"
+          >
+            DOCTORS APPOINTMENT
+          </p>
+          <div
+            class="line-hor d-flex justify-content-center"
+          >
+            <span
+              class="line "
+            />
+          </div>
+        </div>
+        <div
+          class="logo-text hidden mt-5"
+        >
+          <p
+            class="p-2 logo-content"
+          >
+            The leading online booking website for doctors anywhere, anytime. Take care of your body it will take care of you
+          </p>
+        </div>
+      </section>
+      <section
+        class="section-form d-flex flex-column align-items-center mt-4 mt-md-5 pt-md-5"
+      >
+        <div
+          class="form-title"
+        >
+          <p
+            class="h3"
+          >
+            Log in to your account
+          </p>
+        </div>
+        <div
+          class="form-container"
+        >
+          <form
+            class="signup-form"
+            method="POST"
+          >
+            <div
+              class="form-group"
+            >
+              <p
+                class="ms-4 mb-1"
+              >
+                Email
+              </p>
+              <input
+                class="form-control rounded-pill"
+                id="signup-email"
+                name="email"
+                placeholder="Enter your email"
+                required=""
+                type="text"
+              />
+            </div>
+            <div
+              class="form-group"
+            >
+              <p
+                class="ms-4 mb-1"
+              >
+                Password
+              </p>
+              <input
+                class="form-control rounded-pill"
+                id="signup-password"
+                name="password"
+                placeholder="Enter your password"
+                required=""
+                type="password"
+              />
+            </div>
+            <div
+              class="signup-buttons mt-5 text-center"
+            >
+              <button
+                class="style-btn rounded-pill"
+                type="submit"
+              >
+                LOGIN
+              </button>
+            </div>
+          </form>
+          <div
+            class="notice-account mt-4"
+          >
+            <p>
+              Dont have an account?
+               
+              <span
+                class="login-link"
+              >
+                <a
+                  href="/signup"
+                  id="login-on-signup"
+                >
+                  Sign up
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

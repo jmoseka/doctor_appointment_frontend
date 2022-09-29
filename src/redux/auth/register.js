@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../config/axios';
 
 const SIGN_UP = 'DOCTOR_APPOINTMENT/SIGN_UP';
 const SIGN_UP_SUCCESS = 'DOCTOR_APPOINTMENT/SIGN_UP_SUCCESS';
@@ -24,7 +24,7 @@ const SignUpFailure = (payload) => ({
 export const SignUpAction = (payload) => async (dispatch) => {
   dispatch(SignUp());
   axios
-    .post('http://localhost:3000/api/v1/users', payload)
+    .post('https://hidden-citadel-49495.herokuapp.com/api/v1/users', payload)
     .then((res) => {
       dispatch(SignUpSuccess(res.data));
     })
